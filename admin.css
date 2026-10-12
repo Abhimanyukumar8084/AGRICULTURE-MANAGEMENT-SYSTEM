@@ -5365,7 +5365,6 @@ a {
     background: #075f3d;
 }
 
-
 /* ================= ADMIN PROFILE ================= */
 
 .admin-profile-box {
@@ -6710,4 +6709,126 @@ a {
 
     }
 
+}
+
+/* Final overrides keep the admin polish consistent with legacy page styles. */
+body {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.admin-sidebar {
+    background: linear-gradient(165deg, #0d5a3e 0%, #084831 100%);
+    box-shadow: 8px 0 30px rgba(14, 61, 40, .09);
+}
+
+.admin-menu a {
+    min-height: 42px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.admin-menu a:hover {
+    transform: translateX(2px);
+    background: rgba(255, 255, 255, .1);
+}
+
+.admin-menu a.active {
+    border-color: rgba(255, 255, 255, .1);
+    background: linear-gradient(120deg, #169652, #1b8050);
+}
+
+.admin-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 4px 18px rgba(18, 64, 39, .045);
+    backdrop-filter: blur(12px);
+}
+
+.stat-card,
+.settings-card,
+.settings-section,
+.notification-setting,
+.admin-profile-box,
+.table-container,
+.table-wrapper,
+.content-card,
+.admin-card {
+    border-color: #e2ece5;
+    border-radius: 14px;
+    box-shadow: 0 14px 36px rgba(24, 69, 46, .075);
+}
+
+.stat-card {
+    min-height: 92px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 42px rgba(24, 69, 46, .12);
+}
+
+.settings-save button {
+    min-height: 40px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #16834a, #279b5d);
+    box-shadow: 0 8px 18px rgba(24, 131, 76, .16);
+    font-size: 12px;
+}
+
+.settings-card-heading h2 {
+    font-size: 14px;
+}
+
+.settings-card-heading p {
+    font-size: 11px;
+}
+
+.settings-form {
+    gap: 16px;
+}
+
+.setting-field label {
+    margin-bottom: 7px;
+    font-size: 11px;
+}
+
+.setting-field input,
+.setting-field select {
+    min-height: 40px;
+    height: auto;
+    padding: 8px 10px;
+    border-radius: 9px;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .admin-content {
+        padding: 20px;
+    }
+
+    .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .admin-content {
+        padding: 16px 12px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
 }

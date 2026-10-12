@@ -201,7 +201,9 @@
 
                                 <input
                                     type="text"
+                                    name="fullName"
                                     placeholder="Enter farmer name"
+                                    maxlength="161"
                                     required
                                 >
 
@@ -217,8 +219,10 @@
 
                                 <input
                                     type="tel"
+                                    name="phone"
                                     placeholder="Enter mobile number"
                                     maxlength="10"
+                                    pattern="[0-9]{10}"
                                     required
                                 >
 
@@ -227,11 +231,14 @@
 
                             <div class="form-group">
 
-                                <label>Email Address</label>
+                                <label>Email Address (used to sign in) <b>*</b></label>
 
                                 <input
                                     type="email"
+                                    name="email"
                                     placeholder="Enter email address"
+                                    maxlength="254"
+                                    required
                                 >
 
                             </div>
@@ -241,11 +248,11 @@
 
                                 <label>Gender</label>
 
-                                <select>
-                                    <option>Select Gender</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
+                                <select name="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
                                 </select>
 
                             </div>
@@ -283,9 +290,9 @@
                                     <b>*</b>
                                 </label>
 
-                                <select required>
+                                <select name="state" required>
 
-                                    <option>Select State</option>
+                                    <option value="">Select State</option>
                                     <option>Rajasthan</option>
                                     <option>Bihar</option>
                                     <option>Uttar Pradesh</option>
@@ -308,7 +315,9 @@
 
                                 <input
                                     type="text"
+                                    name="district"
                                     placeholder="Enter district"
+                                    maxlength="80"
                                     required
                                 >
 
@@ -321,7 +330,9 @@
 
                                 <input
                                     type="text"
+                                    name="village"
                                     placeholder="Enter village or city"
+                                    maxlength="120"
                                 >
 
                             </div>
@@ -333,8 +344,10 @@
 
                                 <input
                                     type="text"
+                                    name="pinCode"
                                     placeholder="Enter PIN code"
                                     maxlength="6"
+                                    pattern="[0-9]{6}"
                                 >
 
                             </div>
@@ -372,9 +385,9 @@
                                     <b>*</b>
                                 </label>
 
-                                <select required>
+                                <select name="mainCrop" required>
 
-                                    <option>Select Main Crop</option>
+                                    <option value="">Select Main Crop</option>
                                     <option>Wheat</option>
                                     <option>Rice</option>
                                     <option>Maize</option>
@@ -393,9 +406,9 @@
 
                                 <label>Farming Type</label>
 
-                                <select>
+                                <select name="farmingType">
 
-                                    <option>Select Farming Type</option>
+                                    <option value="">Select Farming Type</option>
                                     <option>Organic</option>
                                     <option>Conventional</option>
                                     <option>Mixed Farming</option>
@@ -412,7 +425,10 @@
 
                                 <input
                                     type="number"
+                                    name="landArea"
                                     placeholder="Enter land area"
+                                    min="0.01"
+                                    step="0.01"
                                 >
 
                             </div>
@@ -422,7 +438,7 @@
 
                                 <label>Land Unit</label>
 
-                                <select>
+                                <select name="landUnit">
 
                                     <option>Acres</option>
                                     <option>Hectares</option>
@@ -461,13 +477,17 @@
                             <div class="form-group">
 
                                 <label>
-                                    Username
+                                    Directory Username
                                     <b>*</b>
                                 </label>
 
                                 <input
                                     type="text"
+                                    name="username"
                                     placeholder="Create username"
+                                    minlength="3"
+                                    maxlength="40"
+                                    pattern="[A-Za-z0-9._-]{3,40}"
                                     required
                                 >
 
@@ -483,7 +503,10 @@
 
                                 <input
                                     type="password"
+                                    name="password"
                                     placeholder="Create password"
+                                    minlength="12"
+                                    maxlength="72"
                                     required
                                 >
 
@@ -494,11 +517,11 @@
 
                                 <label>Status</label>
 
-                                <select>
+                                <select name="status">
 
-                                    <option>Active</option>
-                                    <option>Pending</option>
-                                    <option>Inactive</option>
+                                    <option value="ACTIVE">Active</option>
+                                    <option value="PENDING">Pending (sign-in disabled)</option>
+                                    <option value="INACTIVE">Inactive (sign-in disabled)</option>
 
                                 </select>
 
@@ -576,5 +599,6 @@
 <!-- END ADMIN LAYOUT -->
 
 
+<script src="app.js"></script>
 </body>
 </html>

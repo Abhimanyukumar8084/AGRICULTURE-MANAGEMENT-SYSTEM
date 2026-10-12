@@ -95,10 +95,10 @@
 
                 <button
                     type="button"
-                    class="login-type-btn active"
-                    id="userBtn"
-                    onclick="setLoginType('user')">
-                    👤 User
+                    class="login-type-btn"
+                    id="buyerBtn"
+                    onclick="setLoginType('buyer')">
+                    🛒 Buyer
                 </button>
 
                 <button
@@ -111,7 +111,7 @@
 
                 <button
                     type="button"
-                    class="login-type-btn"
+                    class="login-type-btn active"
                     id="adminBtn"
                     onclick="setLoginType('admin')">
                     🛡️ Admin
@@ -122,7 +122,7 @@
 
             <!-- FORM -->
 
-            <form id="loginForm" action="dashboard.html">
+            <form id="loginForm">
 
                 <div class="login-form-group">
 
@@ -134,6 +134,8 @@
 
                         <input
                             type="email"
+                            name="email"
+                            autocomplete="username"
                             placeholder="Enter your email"
                             required
                         >
@@ -153,6 +155,8 @@
 
                         <input
                             type="password"
+                            name="password"
+                            autocomplete="current-password"
                             placeholder="Enter your password"
                             required
                         >
@@ -173,7 +177,7 @@
                         Remember me
                     </label>
 
-                    <a href="#">
+                    <a href="forgot-password.html">
                         Forgot Password?
                     </a>
 
@@ -188,6 +192,8 @@
                     Login
 
                 </button>
+
+                <p id="loginMessage" role="alert" aria-live="polite"></p>
 
             </form>
 
@@ -256,10 +262,25 @@
 
 
 <script>
+const API_HOST = window.location.hostname || "localhost";
+const API_BASE = window.DIGITAL_AGRICULTURE_API || `http://${API_HOST}:8080/api`;
+
+async function csrfToken() {
+    const response = await fetch(`${API_BASE}/csrf`, { credentials: "include" });
+    if (!response.ok) throw new Error("Could not connect to the server. Is the backend running?");
+    return (await response.json()).token;
+}
+
+function dashboardFor(role) {
+    if (role === "admin") return "admin-dashboard.html";
+    if (role === "expert") return "expert-dashboard.html";
+    if (role === "buyer") return "market.html";
+    return "dashboard.html";
+}
 
 function setLoginType(type) {
 
-    const userBtn = document.getElementById("userBtn");
+    const buyerBtn = document.getElementById("buyerBtn");
     const expertBtn = document.getElementById("expertBtn");
     const adminBtn = document.getElementById("adminBtn");
 
@@ -271,68 +292,72 @@ function setLoginType(type) {
     const button = document.getElementById("loginButton");
     const registerText = document.getElementById("registerText");
 
-
-    userBtn.classList.remove("active");
+    buyerBtn.classList.remove("active");
     expertBtn.classList.remove("active");
     adminBtn.classList.remove("active");
 
-
-    if (type === "user") {
-
-        userBtn.classList.add("active");
-
-        title.innerText = "Welcome Back";
-        subtitle.innerText =
-            "Login to continue to Digital Agriculture";
-
-        icon.innerText = "🔐";
-
-        button.innerText = "Login";
-
-        form.action = "dashboard.html";
-
+    if (type === "buyer") {
+        buyerBtn.classList.add("active");
+        title.innerText = "Buyer Login";
+        subtitle.innerText = "Browse market prices and listings";
+        icon.innerText = "🛒";
+        button.innerText = "Login as Buyer";
+        form.dataset.accountType = "buyer";
         registerText.style.display = "block";
     }
-
-
     else if (type === "expert") {
-
         expertBtn.classList.add("active");
-
         title.innerText = "Expert Login";
-        subtitle.innerText =
-            "Access your expert dashboard";
-
+        subtitle.innerText = "Access your expert dashboard";
         icon.innerText = "🧑‍🌾";
-
         button.innerText = "Login as Expert";
-
-        form.action = "expert-dashboard.html";
-
+        form.dataset.accountType = "expert";
         registerText.style.display = "none";
     }
-
-
     else {
-
         adminBtn.classList.add("active");
-
         title.innerText = "Admin Login";
-        subtitle.innerText =
-            "Access the administration panel";
-
+        subtitle.innerText = "Access the administration panel";
         icon.innerText = "🛡️";
-
         button.innerText = "Login as Admin";
-
-        form.action = "admin-dashboard.html";
-
+        form.dataset.accountType = "admin";
         registerText.style.display = "none";
     }
-
 }
+
+setLoginType("admin");
+
+document.getElementById("loginForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const message = document.getElementById("loginMessage");
+    const button = document.getElementById("loginButton");
+    message.textContent = "";
+    button.disabled = true;
+    try {
+        const token = await csrfToken();
+        const response = await fetch(`${API_BASE}/auth/login`, {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+            body: JSON.stringify({
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+                accountType: form.dataset.accountType || "admin"
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Login failed.");
+        window.location.assign(dashboardFor(result.role));
+    } catch (error) {
+        message.textContent = error.message;
+    } finally {
+        button.disabled = false;
+    }
+});
 
 </script>
 
+<script src="app.js"></script>
 </body>
 </html>

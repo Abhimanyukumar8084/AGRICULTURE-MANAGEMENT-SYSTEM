@@ -59,7 +59,7 @@
                 </div>
 
 
-                <form action="dashboard.html">
+                <form id="registerForm">
 
                     <div class="register-row">
 
@@ -71,6 +71,8 @@
                                 <span>👤</span>
                                 <input
                                     type="text"
+                                    name="firstName"
+                                    autocomplete="given-name"
                                     placeholder="First name"
                                     required
                                 >
@@ -86,6 +88,8 @@
                                 <span>👤</span>
                                 <input
                                     type="text"
+                                    name="lastName"
+                                    autocomplete="family-name"
                                     placeholder="Last name"
                                     required
                                 >
@@ -104,6 +108,8 @@
                             <span>✉</span>
                             <input
                                 type="email"
+                                name="email"
+                                autocomplete="email"
                                 placeholder="Enter your email"
                                 required
                             >
@@ -120,6 +126,8 @@
                             <span>📱</span>
                             <input
                                 type="tel"
+                                name="phone"
+                                autocomplete="tel"
                                 placeholder="Enter your phone number"
                                 required
                             >
@@ -136,11 +144,11 @@
 
                             <span>👨‍🌾</span>
 
-                            <select required>
+                            <select name="accountType" required>
                                 <option value="">Select account type</option>
                                 <option value="farmer">Farmer</option>
-                                <option value="expert">Agriculture Expert</option>
                                 <option value="buyer">Buyer</option>
+                                <option value="expert">Agriculture Expert</option>
                             </select>
 
                         </div>
@@ -159,6 +167,9 @@
 
                                 <input
                                     type="password"
+                                    name="password"
+                                    autocomplete="new-password"
+                                    minlength="12"
                                     placeholder="Password"
                                     required
                                 >
@@ -175,6 +186,9 @@
 
                                 <input
                                     type="password"
+                                    name="confirmPassword"
+                                    autocomplete="new-password"
+                                    minlength="12"
                                     placeholder="Confirm"
                                     required
                                 >
@@ -206,6 +220,8 @@
                         Create Account
                     </button>
 
+                    <p id="registerMessage" role="alert" aria-live="polite"></p>
+
                 </form>
 
 
@@ -228,5 +244,56 @@
 
     </div>
 
+<script>
+const API_HOST = window.location.hostname || "localhost";
+const API_BASE = window.DIGITAL_AGRICULTURE_API || `http://${API_HOST}:8080/api`;
+
+async function csrfToken() {
+    const response = await fetch(`${API_BASE}/csrf`, { credentials: "include" });
+    if (!response.ok) throw new Error("Could not connect to the server. Is the backend running?");
+    return (await response.json()).token;
+}
+
+document.getElementById("registerForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const message = document.getElementById("registerMessage");
+    const button = form.querySelector('button[type="submit"]');
+    message.textContent = "";
+    if (form.elements.password.value !== form.elements.confirmPassword.value) {
+        message.textContent = "Passwords do not match.";
+        return;
+    }
+    button.disabled = true;
+    try {
+        const token = await csrfToken();
+        const response = await fetch(`${API_BASE}/auth/register`, {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+            body: JSON.stringify({
+                firstName: form.elements.firstName.value,
+                lastName: form.elements.lastName.value,
+                email: form.elements.email.value,
+                phone: form.elements.phone.value,
+                password: form.elements.password.value,
+                accountType: form.elements.accountType.value
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) {
+            const fieldError = result.fields && Object.values(result.fields)[0];
+            throw new Error(fieldError || result.error || "Could not create account.");
+        }
+        window.location.assign("login.html");
+    } catch (error) {
+        message.textContent = error.message;
+    } finally {
+        button.disabled = false;
+    }
+});
+</script>
+
+<script src="app.js"></script>
 </body>
 </html>

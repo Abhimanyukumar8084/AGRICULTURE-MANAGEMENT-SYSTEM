@@ -148,7 +148,7 @@
             </div>
 
 
-            <form>
+            <form id="contactForm">
 
                 <div class="input-line">
 
@@ -156,6 +156,7 @@
 
                     <input
                         type="text"
+                        name="name"
                         placeholder="Enter your name"
                         required
                     >
@@ -169,6 +170,7 @@
 
                     <input
                         type="email"
+                        name="email"
                         placeholder="you@example.com"
                         required
                     >
@@ -180,13 +182,13 @@
 
                     <label>What is this about?</label>
 
-                    <select required>
+                    <select name="topic" required>
 
                         <option value="">Select a topic</option>
-                        <option>General Question</option>
-                        <option>Technical Support</option>
-                        <option>Farming Information</option>
-                        <option>Feedback</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Farming Information">Farming Information</option>
+                        <option value="Feedback">Feedback</option>
 
                     </select>
 
@@ -198,7 +200,9 @@
                     <label>Your Message</label>
 
                     <textarea
+                        name="message"
                         rows="4"
+                        minlength="10"
                         placeholder="Tell us what's on your mind..."
                         required
                     ></textarea>
@@ -210,6 +214,7 @@
                     Send Message
                     <span>↗</span>
                 </button>
+                <p id="contactMessage" role="status" aria-live="polite"></p>
 
             </form>
 
@@ -269,6 +274,51 @@
 
 </footer>
 
+<script>
+const API_HOST = window.location.hostname || "localhost";
+const API_BASE = window.DIGITAL_AGRICULTURE_API || `http://${API_HOST}:8080/api`;
 
+async function csrfToken() {
+    const response = await fetch(`${API_BASE}/csrf`, { credentials: "include" });
+    if (!response.ok) throw new Error("Could not connect to the server. Is the backend running?");
+    return (await response.json()).token;
+}
+
+document.getElementById("contactForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const status = document.getElementById("contactMessage");
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    status.textContent = "";
+    try {
+        const token = await csrfToken();
+        const response = await fetch(`${API_BASE}/contact`, {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+            body: JSON.stringify({
+                name: form.elements.name.value,
+                email: form.elements.email.value,
+                topic: form.elements.topic.value,
+                message: form.elements.message.value
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) {
+            const fieldError = result.fields && Object.values(result.fields)[0];
+            throw new Error(fieldError || result.error || "Message could not be sent.");
+        }
+        form.reset();
+        status.textContent = result.message;
+    } catch (error) {
+        status.textContent = error.message;
+    } finally {
+        button.disabled = false;
+    }
+});
+</script>
+
+<script src="app.js"></script>
 </body>
 </html>
