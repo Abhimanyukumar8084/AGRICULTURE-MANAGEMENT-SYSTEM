@@ -165,9 +165,9 @@
                             A
                         </div>
 
-                        <h2>Administrator</h2>
+                        <h2>Account</h2>
 
-                        <p>Super Administrator</p>
+                        <p>Administrator</p>
 
 
                         <div class="profile-status">
@@ -189,7 +189,7 @@
                                 </span>
 
                                 <strong>
-                                    admin@digitalagri.com
+                                    —
                                 </strong>
 
                             </div>
@@ -202,7 +202,7 @@
                                 </span>
 
                                 <strong>
-                                    Super Admin
+                                    Administrator
                                 </strong>
 
                             </div>
@@ -215,7 +215,7 @@
                                 </span>
 
                                 <strong>
-                                    January 2026
+                                    —
                                 </strong>
 
                             </div>
@@ -224,11 +224,11 @@
                             <div class="side-info-row">
 
                                 <span>
-                                    Last Login
+                                    Account Status
                                 </span>
 
                                 <strong>
-                                    Today, 10:42 AM
+                                    —
                                 </strong>
 
                             </div>
@@ -315,7 +315,7 @@
 
                             <input
                                 type="text"
-                                value="Administrator"
+                                value=""
                                 disabled
                             >
 
@@ -330,7 +330,7 @@
 
                             <input
                                 type="text"
-                                value="admin"
+                                value=""
                                 disabled
                             >
 
@@ -345,7 +345,7 @@
 
                             <input
                                 type="email"
-                                value="admin@digitalagri.com"
+                                value=""
                                 disabled
                             >
 
@@ -360,7 +360,7 @@
 
                             <input
                                 type="text"
-                                value="+91 98765 43210"
+                                value=""
                                 disabled
                             >
 
@@ -390,13 +390,7 @@
 
                             <select disabled>
 
-                                <option selected>
-                                    Active
-                                </option>
-
-                                <option>
-                                    Inactive
-                                </option>
+                                <option value="ACTIVE"></option>
 
                             </select>
 
@@ -411,7 +405,7 @@
 
                             <input
                                 type="text"
-                                value="Digital Agriculture Administration Office"
+                                value=""
                                 disabled
                             >
 
@@ -421,73 +415,6 @@
                     </form>
 
 
-
-                    <!-- ================= SECURITY ================= -->
-
-                    <div class="account-security">
-
-
-                        <h4>
-                            Account Security
-                        </h4>
-
-
-                        <div class="security-item">
-
-
-                            <div>
-
-                                <strong>
-                                    Password
-                                </strong>
-
-                                <span>
-                                    Last changed 30 days ago
-                                </span>
-
-                            </div>
-
-
-                            <a
-                                href="change-password.html"
-                                class="security-action"
-                            >
-                                Change Password
-                            </a>
-
-
-                        </div>
-
-
-
-                        <div class="security-item">
-
-
-                            <div>
-
-                                <strong>
-                                    Two-Factor Authentication
-                                </strong>
-
-                                <span>
-                                    Add an extra layer of account security.
-                                </span>
-
-                            </div>
-
-
-                            <a
-                                href="admin-settings.html"
-                                class="security-action"
-                            >
-                                Manage
-                            </a>
-
-
-                        </div>
-
-
-                    </div>
 
                 </section>
 
@@ -530,51 +457,6 @@
 
 
 
-<!-- ================= EDIT / SAVE SCRIPT ================= -->
-
-<script>
-
-    const editButton = document.getElementById("editProfileBtn");
-    const saveButton = document.getElementById("saveProfileBtn");
-    const form = document.getElementById("profileForm");
-
-    const editableFields = form.querySelectorAll(
-        "input:not([readonly]), select"
-    );
-
-
-    editButton.addEventListener("click", function () {
-
-        editableFields.forEach(function (field) {
-            field.disabled = false;
-        });
-
-        editButton.style.display = "none";
-
-        saveButton.style.display = "inline-flex";
-
-        editableFields[0].focus();
-
-    });
-
-
-    form.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        alert("Profile changes saved successfully.");
-
-        editableFields.forEach(function (field) {
-            field.disabled = true;
-        });
-
-        editButton.style.display = "inline-flex";
-
-        saveButton.style.display = "none";
-
-    });
-
-</script>
-
+<script src="app.js"></script>
 </body>
 </html>

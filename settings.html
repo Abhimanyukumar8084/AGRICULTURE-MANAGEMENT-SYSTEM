@@ -14,34 +14,34 @@
     <aside class="sidebar">
 
         <div class="dashboard-logo">
-            <span>🌿</span>
+            <span class="settings-brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 4c-8 0-13 3.8-13 10a6 6 0 0 0 6 6c6.2 0 10-5 10-13V4h-3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 21c2.2-4.5 5.5-7.7 10-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
             <h2>Digital Agriculture</h2>
         </div>
 
         <nav class="sidebar-nav">
 
             <a href="dashboard.html" class="sidebar-link">
-                <span>📊</span> Dashboard
+                <span aria-hidden="true">▦</span> Dashboard
             </a>
 
             <a href="crops.html" class="sidebar-link">
-                <span>🌱</span> My Crops
+                <span aria-hidden="true">♧</span> My Crops
             </a>
 
             <a href="weather.html" class="sidebar-link">
-                <span>☁️</span> Weather
+                <span aria-hidden="true">☁</span> Weather
             </a>
 
             <a href="market.html" class="sidebar-link">
-                <span>💰</span> Market Prices
+                <span aria-hidden="true">↗</span> Market Prices
             </a>
 
             <a href="expert.html" class="sidebar-link">
-                <span>👨‍🌾</span> Expert Advice
+                <span aria-hidden="true">♙</span> Expert Advice
             </a>
 
             <a href="activities.html" class="sidebar-link">
-                <span>📋</span> My Activities
+                <span aria-hidden="true">▤</span> My Activities
             </a>
 
         </nav>
@@ -49,11 +49,11 @@
         <div class="sidebar-bottom">
 
             <a href="settings.html" class="sidebar-link active">
-                <span>⚙️</span> Settings
+                <span aria-hidden="true">⚙</span> Settings
             </a>
 
             <a href="index.html" class="sidebar-link logout">
-                <span>🚪</span> Logout
+                <span aria-hidden="true">↪</span> Logout
             </a>
 
         </div>
@@ -69,18 +69,20 @@
                 <p>Manage your account and preferences</p>
             </div>
 
-            <button class="settings-save" onclick="alert('Settings saved successfully!'); window.location.href='dashboard.html';">
-                Save Changes
+            <button class="settings-save" type="submit" form="profileSettingsForm" id="saveSettings">
+                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 3h12l4 4v14H3V3h2Zm2 0v6h10V3M7 21v-8h10v8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                Save changes
             </button>
         </div>
+        <p class="settings-save-status" id="settingsSaveStatus" role="status" aria-live="polite">Your changes are saved to your account.</p>
 
 
-        <div class="settings-layout">
+        <form class="settings-layout" id="profileSettingsForm">
 
             <div class="settings-card">
 
                 <div class="settings-title">
-                    <span>👤</span>
+                    <span class="settings-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 21a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
 
                     <div>
                         <h2>Profile Information</h2>
@@ -92,22 +94,32 @@
 
                     <label>
                         Full Name
-                        <input type="text" value="Krishan Kumar">
+                        <input type="text" name="fullName" autocomplete="name" maxlength="161" required>
                     </label>
 
                     <label>
                         Email
-                        <input type="email" value="krishan@example.com">
+                        <input type="email" name="email" autocomplete="email" disabled>
                     </label>
 
                     <label>
                         Phone
-                        <input type="text" value="+91 9876543210">
+                        <input type="tel" name="phone" autocomplete="tel" maxlength="24" placeholder="+1 555 123 4567">
                     </label>
 
                     <label>
                         Location
-                        <input type="text" value="Jaipur, Rajasthan">
+                        <input type="text" name="location" autocomplete="address-level2" maxlength="120" placeholder="Village, town or city">
+                    </label>
+
+                    <label>
+                        State (for local mandi prices)
+                        <input type="text" name="state" autocomplete="address-level1" maxlength="80">
+                    </label>
+
+                    <label>
+                        District (for local mandi prices)
+                        <input type="text" name="district" maxlength="80">
                     </label>
 
                 </div>
@@ -118,7 +130,7 @@
             <div class="settings-card">
 
                 <div class="settings-title">
-                    <span>🚜</span>
+                    <span class="settings-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17h13l2-6h3l1 6h-2m-17 0a2 2 0 1 0 4 0m-4 0H2V8h11v9m3 0a2 2 0 1 0 4 0m-7-6h5M6 11h3m-2-3v3m9-3 2 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 
                     <div>
                         <h2>Farm Details</h2>
@@ -130,29 +142,31 @@
 
                     <label>
                         Farm Name
-                        <input type="text" value="My Green Farm">
+                        <input type="text" name="farmName" maxlength="120" placeholder="Your farm's name">
                     </label>
 
                     <label>
                         Farm Area
-                        <input type="text" value="42 Acres">
+                        <input type="text" name="farmArea" maxlength="40" placeholder="e.g. 12 acres">
                     </label>
 
                     <label>
                         Soil Type
-                        <select>
-                            <option>Loamy Soil</option>
-                            <option>Clay Soil</option>
-                            <option>Sandy Soil</option>
+                        <select name="soilType">
+                            <option value="">Choose soil type</option>
+                            <option value="Loamy Soil">Loamy Soil</option>
+                            <option value="Clay Soil">Clay Soil</option>
+                            <option value="Sandy Soil">Sandy Soil</option>
                         </select>
                     </label>
 
                     <label>
                         Irrigation
-                        <select>
-                            <option>Drip Irrigation</option>
-                            <option>Sprinkler</option>
-                            <option>Canal</option>
+                        <select name="irrigationMethod">
+                            <option value="">Choose irrigation method</option>
+                            <option value="Drip Irrigation">Drip Irrigation</option>
+                            <option value="Sprinkler">Sprinkler</option>
+                            <option value="Canal">Canal</option>
                         </select>
                     </label>
 
@@ -164,7 +178,7 @@
             <div class="settings-card">
 
                 <div class="settings-title">
-                    <span>🔔</span>
+                    <span class="settings-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 
                     <div>
                         <h2>Notifications</h2>
@@ -178,7 +192,7 @@
                         <small>Receive weather updates</small>
                     </div>
 
-                    <input type="checkbox" checked>
+                    <input type="checkbox" name="notifyWeather">
                 </div>
 
                 <div class="setting-option">
@@ -187,7 +201,7 @@
                         <small>Receive crop price updates</small>
                     </div>
 
-                    <input type="checkbox" checked>
+                    <input type="checkbox" name="notifyMarket">
                 </div>
 
                 <div class="setting-option">
@@ -196,7 +210,7 @@
                         <small>Receive farming activity reminders</small>
                     </div>
 
-                    <input type="checkbox" checked>
+                    <input type="checkbox" name="notifyActivities">
                 </div>
 
             </div>
@@ -205,7 +219,7 @@
             <div class="settings-card">
 
                 <div class="settings-title">
-                    <span>🔐</span>
+                    <span class="settings-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
 
                     <div>
                         <h2>Security</h2>
@@ -220,7 +234,7 @@
                         <small>Change your account password</small>
                     </div>
 
-                    <button>Change</button>
+                    <span class="settings-unavailable">Not available yet</span>
 
                 </div>
 
@@ -231,9 +245,9 @@
                         <small>Add extra account security</small>
                     </div>
 
-                    <button>Enable</button>
+                    <span class="settings-unavailable">Not available yet</span>
 
-                </div>
+                </form>
 
             </div>
 
@@ -243,5 +257,6 @@
 
 </div>
 
+<script src="app.js"></script>
 </body>
 </html>
