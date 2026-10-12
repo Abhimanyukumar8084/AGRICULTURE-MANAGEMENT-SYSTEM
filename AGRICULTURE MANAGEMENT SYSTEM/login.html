@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Digital Agriculture</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <!-- LEFT VISUAL -->
+    <div class="login-side login-side-left">
+
+        <div class="side-circle circle-one"></div>
+        <div class="side-circle circle-two"></div>
+
+        <div class="side-content">
+
+            <div class="side-brand">
+                <span>🌿</span>
+                <b>Digital Agriculture</b>
+            </div>
+
+            <div class="side-main">
+                <span class="small-label">SMART FARMING PLATFORM</span>
+
+                <h1>
+                    Grow Better.<br>
+                    Farm Smarter.
+                </h1>
+
+                <p>
+                    Smart technology, useful information and
+                    expert guidance — everything farmers need
+                    in one place.
+                </p>
+            </div>
+
+            <div class="side-points">
+
+                <div class="side-point">
+                    <span>🌱</span>
+                    <div>
+                        <b>Smart Farming</b>
+                        <small>Manage your crops easily</small>
+                    </div>
+                </div>
+
+                <div class="side-point">
+                    <span>☁️</span>
+                    <div>
+                        <b>Weather Updates</b>
+                        <small>Stay prepared with forecasts</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGIN CARD -->
+
+    <div class="login-center">
+
+        <div class="login-card">
+
+            <div class="login-heading">
+
+                <div class="login-icon" id="loginIcon">
+                    🔐
+                </div>
+
+                <h1 id="loginTitle">
+                    Welcome Back
+                </h1>
+
+                <p id="loginSubtitle">
+                    Login to continue to Digital Agriculture
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN TYPE -->
+
+            <div class="login-type">
+
+                <button
+                    type="button"
+                    class="login-type-btn"
+                    id="farmerBtn"
+                    onclick="setLoginType('farmer')">
+                    🌱 Farmer
+                </button>
+
+                <button
+                    type="button"
+                    class="login-type-btn"
+                    id="buyerBtn"
+                    onclick="setLoginType('buyer')">
+                    🛒 Buyer
+                </button>
+
+                <button
+                    type="button"
+                    class="login-type-btn"
+                    id="expertBtn"
+                    onclick="setLoginType('expert')">
+                    🧑‍🌾 Expert
+                </button>
+
+                <button
+                    type="button"
+                    class="login-type-btn active"
+                    id="adminBtn"
+                    onclick="setLoginType('admin')">
+                    🛡️ Admin
+                </button>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form id="loginForm">
+
+                <div class="login-form-group">
+
+                    <label>Email Address</label>
+
+                    <div class="login-input">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            name="email"
+                            autocomplete="username"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-form-group">
+
+                    <label>Password</label>
+
+                    <div class="login-input">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            name="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button class="password-toggle" type="button" data-password-toggle data-visible="false" aria-label="Show password" aria-pressed="false">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path class="password-eye-slash" d="m3 3 18 18"></path>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton">
+
+                    Login
+
+                </button>
+
+                <p id="loginMessage" role="alert" aria-live="polite"></p>
+
+            </form>
+
+
+            <p class="register-link" id="registerText">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Register here
+                </a>
+
+            </p>
+
+
+            <div class="login-divider">
+                <span>OR</span>
+            </div>
+
+
+            <a href="index.html" class="home-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT VISUAL -->
+
+    <div class="login-side login-side-right">
+
+        <div class="right-decoration">
+
+            <div class="crop-icon crop-one">🌾</div>
+            <div class="crop-icon crop-two">🌱</div>
+            <div class="crop-icon crop-three">🍃</div>
+
+        </div>
+
+        <div class="right-info">
+
+            <span>AGRICULTURE • TECHNOLOGY</span>
+
+            <h2>
+                Technology<br>
+                meets farming.
+            </h2>
+
+            <p>
+                Make informed decisions with
+                better agricultural insights.
+            </p>
+
+            <div class="right-stat">
+                <strong>01</strong>
+                <span>Smart agricultural ecosystem</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+const API_HOST = window.location.hostname || "localhost";
+const API_BASE = window.DIGITAL_AGRICULTURE_API || `http://${API_HOST}:8080/api`;
+
+async function csrfToken() {
+    const response = await fetch(`${API_BASE}/csrf`, { credentials: "include" });
+    if (!response.ok) throw new Error("Could not connect to the server. Is the backend running?");
+    return (await response.json()).token;
+}
+
+function dashboardFor(role) {
+    if (role === "admin") return "admin-dashboard.html";
+    if (role === "expert") return "expert-dashboard.html";
+    if (role === "buyer") return "market.html";
+    return "dashboard.html";
+}
+
+function setLoginType(type) {
+
+    const farmerBtn = document.getElementById("farmerBtn");
+    const buyerBtn = document.getElementById("buyerBtn");
+    const expertBtn = document.getElementById("expertBtn");
+    const adminBtn = document.getElementById("adminBtn");
+
+    const title = document.getElementById("loginTitle");
+    const subtitle = document.getElementById("loginSubtitle");
+    const icon = document.getElementById("loginIcon");
+
+    const form = document.getElementById("loginForm");
+    const button = document.getElementById("loginButton");
+    const registerText = document.getElementById("registerText");
+
+    [farmerBtn, buyerBtn, expertBtn, adminBtn].forEach(loginTypeButton => {
+        loginTypeButton.classList.remove("active");
+    });
+
+    if (type === "farmer") {
+        farmerBtn.classList.add("active");
+        title.innerText = "Farmer Login";
+        subtitle.innerText = "Manage your crops and farm activities";
+        icon.innerText = "🌱";
+        button.innerText = "Login as Farmer";
+        form.dataset.accountType = "farmer";
+        registerText.style.display = "block";
+    }
+    else if (type === "buyer") {
+        buyerBtn.classList.add("active");
+        title.innerText = "Buyer Login";
+        subtitle.innerText = "Browse market prices and listings";
+        icon.innerText = "🛒";
+        button.innerText = "Login as Buyer";
+        form.dataset.accountType = "buyer";
+        registerText.style.display = "block";
+    }
+    else if (type === "expert") {
+        expertBtn.classList.add("active");
+        title.innerText = "Expert Login";
+        subtitle.innerText = "Access your expert dashboard";
+        icon.innerText = "🧑‍🌾";
+        button.innerText = "Login as Expert";
+        form.dataset.accountType = "expert";
+        registerText.style.display = "none";
+    }
+    else {
+        adminBtn.classList.add("active");
+        title.innerText = "Admin Login";
+        subtitle.innerText = "Access the administration panel";
+        icon.innerText = "🛡️";
+        button.innerText = "Login as Admin";
+        form.dataset.accountType = "admin";
+        registerText.style.display = "none";
+    }
+}
+
+setLoginType("admin");
+
+document.getElementById("loginForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const message = document.getElementById("loginMessage");
+    const button = document.getElementById("loginButton");
+    message.textContent = "";
+    button.disabled = true;
+    try {
+        const token = await csrfToken();
+        const response = await fetch(`${API_BASE}/auth/login`, {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+            body: JSON.stringify({
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+                accountType: form.dataset.accountType || "admin"
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || "Login failed.");
+        window.location.assign(dashboardFor(result.role));
+    } catch (error) {
+        message.textContent = error.message;
+    } finally {
+        button.disabled = false;
+    }
+});
+
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

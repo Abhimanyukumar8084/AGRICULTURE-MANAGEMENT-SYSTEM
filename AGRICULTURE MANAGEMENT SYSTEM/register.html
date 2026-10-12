@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Digital Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="register-page">
+
+        <div class="register-left">
+
+            <div class="register-brand">
+                <span>🌿</span>
+                <h2>Digital Agriculture</h2>
+            </div>
+
+            <div class="register-intro">
+                <span class="register-tag">🌱 JOIN THE COMMUNITY</span>
+
+                <h1>
+                    Start Your<br>
+                    Smart Farming<br>
+                    Journey
+                </h1>
+
+                <p>
+                    Create your account and access smart
+                    agricultural tools, market insights,
+                    weather updates and expert guidance.
+                </p>
+
+                <div class="register-points">
+                    <span>✓ Smart Crop Management</span>
+                    <span>✓ Live Weather Information</span>
+                    <span>✓ Latest Market Prices</span>
+                    <span>✓ Expert Agricultural Advice</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="register-right">
+
+            <div class="register-card">
+
+                <div class="register-heading">
+
+                    <div class="register-icon">👨‍🌾</div>
+
+                    <h1>Create Account</h1>
+
+                    <p>Join Digital Agriculture today</p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <div class="register-row">
+
+                        <div class="register-form-group">
+
+                            <label>First Name</label>
+
+                            <div class="register-input">
+                                <span>👤</span>
+                                <input
+                                    type="text"
+                                    name="firstName"
+                                    autocomplete="given-name"
+                                    placeholder="First name"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <div class="register-form-group">
+
+                            <label>Last Name</label>
+
+                            <div class="register-input">
+                                <span>👤</span>
+                                <input
+                                    type="text"
+                                    name="lastName"
+                                    autocomplete="family-name"
+                                    placeholder="Last name"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-form-group">
+
+                        <label>Email Address</label>
+
+                        <div class="register-input">
+                            <span>✉</span>
+                            <input
+                                type="email"
+                                name="email"
+                                autocomplete="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-form-group">
+
+                        <label>Phone Number</label>
+
+                        <div class="register-input">
+                            <span>📱</span>
+                            <input
+                                type="tel"
+                                name="phone"
+                                autocomplete="tel"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-form-group">
+
+                        <label>Account Type</label>
+
+                        <div class="register-input">
+
+                            <span>👨‍🌾</span>
+
+                            <select name="accountType" required>
+                                <option value="">Select account type</option>
+                                <option value="farmer">Farmer</option>
+                                <option value="buyer">Buyer</option>
+                                <option value="expert">Agriculture Expert</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-row">
+
+                        <div class="register-form-group">
+
+                            <label>Password</label>
+
+                            <div class="register-input">
+                                <span>🔒</span>
+
+                                <input
+                                    type="password"
+                                    name="password"
+                                    autocomplete="new-password"
+                                    minlength="12"
+                                    placeholder="Password"
+                                    required
+                                >
+                                <button class="password-toggle" type="button" data-password-toggle data-visible="false" aria-label="Show password" aria-pressed="false">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path class="password-eye-slash" d="m3 3 18 18"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="register-form-group">
+
+                            <label>Confirm Password</label>
+
+                            <div class="register-input">
+                                <span>🔒</span>
+
+                                <input
+                                    type="password"
+                                    name="confirmPassword"
+                                    autocomplete="new-password"
+                                    minlength="12"
+                                    placeholder="Confirm"
+                                    required
+                                >
+                                <button class="password-toggle" type="button" data-password-toggle data-visible="false" aria-label="Show password" aria-pressed="false">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path class="password-eye-slash" d="m3 3 18 18"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms">
+
+                        <input type="checkbox" required>
+
+                        <span>
+                            I agree to the
+                            <a href="#">Terms & Conditions</a>
+                            and
+                            <a href="#">Privacy Policy</a>
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="register-submit"
+                    >
+                        Create Account
+                    </button>
+
+                    <p id="registerMessage" role="alert" aria-live="polite"></p>
+
+                </form>
+
+
+                <p class="login-existing">
+
+                    Already have an account?
+
+                    <a href="login.html">Login here</a>
+
+                </p>
+
+
+                <a href="index.html" class="register-home">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+const API_HOST = window.location.hostname || "localhost";
+const API_BASE = window.DIGITAL_AGRICULTURE_API || `http://${API_HOST}:8080/api`;
+
+async function csrfToken() {
+    const response = await fetch(`${API_BASE}/csrf`, { credentials: "include" });
+    if (!response.ok) throw new Error("Could not connect to the server. Is the backend running?");
+    return (await response.json()).token;
+}
+
+document.getElementById("registerForm").addEventListener("submit", async event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const message = document.getElementById("registerMessage");
+    const button = form.querySelector('button[type="submit"]');
+    message.textContent = "";
+    if (form.elements.password.value !== form.elements.confirmPassword.value) {
+        message.textContent = "Passwords do not match.";
+        return;
+    }
+    button.disabled = true;
+    try {
+        const token = await csrfToken();
+        const response = await fetch(`${API_BASE}/auth/register`, {
+            method: "POST",
+            credentials: "include",
+            headers: { "Content-Type": "application/json", "X-XSRF-TOKEN": token },
+            body: JSON.stringify({
+                firstName: form.elements.firstName.value,
+                lastName: form.elements.lastName.value,
+                email: form.elements.email.value,
+                phone: form.elements.phone.value,
+                password: form.elements.password.value,
+                accountType: form.elements.accountType.value
+            })
+        });
+        const result = await response.json();
+        if (!response.ok) {
+            const fieldError = result.fields && Object.values(result.fields)[0];
+            throw new Error(fieldError || result.error || "Could not create account.");
+        }
+        window.location.assign("login.html");
+    } catch (error) {
+        message.textContent = error.message;
+    } finally {
+        button.disabled = false;
+    }
+});
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
