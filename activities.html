@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Activities - Digital Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="crops-page">
+
+    <aside class="sidebar">
+
+        <div class="dashboard-logo">
+            <span>🌿</span>
+            <h2>Digital Agriculture</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link">
+                <span>📊</span> Dashboard
+            </a>
+
+            <a href="crops.html" class="sidebar-link">
+                <span>🌱</span> My Crops
+            </a>
+
+            <a href="weather.html" class="sidebar-link">
+                <span>☁️</span> Weather
+            </a>
+
+            <a href="market.html" class="sidebar-link">
+                <span>💰</span> Market Prices
+            </a>
+
+            <a href="expert.html" class="sidebar-link">
+                <span>👨‍🌾</span> Expert Advice
+            </a>
+
+            <a href="activities.html" class="sidebar-link active">
+                <span>📋</span> My Activities
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="sidebar-link">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="sidebar-link logout">
+                <span>🚪</span> Logout
+            </a>
+        </div>
+
+    </aside>
+
+
+    <main class="crops-main">
+
+        <div class="activities-top">
+            <div>
+                <h1>My Activities</h1>
+                <p>Keep track of everything happening on your farm.</p>
+            </div>
+
+            <button class="activity-add">+ Add Activity</button>
+        </div>
+
+
+        <div class="activity-overview">
+
+            <div class="overview-main">
+                <span>Farm Activity</span>
+                <h2>You're doing great! 🌱</h2>
+                <p>Most of your scheduled farming activities are completed on time.</p>
+
+                <div class="activity-bar">
+                    <div></div>
+                </div>
+
+                <small>82% activities completed</small>
+            </div>
+
+            <div class="overview-number">
+                <strong>24</strong>
+                <span>Total Activities</span>
+            </div>
+
+            <div class="overview-number">
+                <strong>18</strong>
+                <span>Completed</span>
+            </div>
+
+        </div>
+
+
+        <div class="activity-filter">
+
+            <div>
+                <button class="filter-active">All</button>
+                <button>Completed</button>
+                <button>Pending</button>
+                <button>Attention</button>
+            </div>
+
+            <select>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>Last Month</option>
+            </select>
+
+        </div>
+
+
+        <div class="activity-columns">
+
+            <section class="timeline-box">
+
+                <div class="box-heading">
+                    <div>
+                        <h2>Activity Timeline</h2>
+                        <p>Your recent farm activities</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot green">💧</div>
+
+                        <div class="timeline-content">
+                            <div>
+                                <h3>Wheat Field Irrigation</h3>
+                                <span class="completed">Completed</span>
+                            </div>
+
+                            <p>12 acres of wheat field were successfully irrigated.</p>
+                            <small>Today · 08:30 AM</small>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot yellow">🧪</div>
+
+                        <div class="timeline-content">
+                            <div>
+                                <h3>Maize Fertilizer Application</h3>
+                                <span class="pending">Pending</span>
+                            </div>
+
+                            <p>Fertilizer application is scheduled for tomorrow.</p>
+                            <small>Today · 11:00 AM</small>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot blue">🌱</div>
+
+                        <div class="timeline-content">
+                            <div>
+                                <h3>Tomato Crop Inspection</h3>
+                                <span class="completed">Completed</span>
+                            </div>
+
+                            <p>Crop health inspection completed successfully.</p>
+                            <small>Yesterday · 04:20 PM</small>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot red">🐛</div>
+
+                        <div class="timeline-content">
+                            <div>
+                                <h3>Potato Pest Check</h3>
+                                <span class="attention">Attention</span>
+                            </div>
+
+                            <p>Pest activity detected. Expert inspection is recommended.</p>
+                            <small>Yesterday · 02:15 PM</small>
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot purple">🌾</div>
+
+                        <div class="timeline-content">
+                            <div>
+                                <h3>Wheat Growth Updated</h3>
+                                <span class="completed">Completed</span>
+                            </div>
+
+                            <p>Wheat crop growth increased from 72% to 78%.</p>
+                            <small>Oct 5 · 10:45 AM</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <aside class="activity-right">
+
+                <div class="next-task">
+
+                    <div class="right-title">
+                        <h2>Next Tasks</h2>
+                        <span>View All</span>
+                    </div>
+
+                    <div class="next-item">
+                        <div>🌽</div>
+                        <section>
+                            <b>Maize Fertilizer</b>
+                            <small>Tomorrow · 09:00 AM</small>
+                        </section>
+                    </div>
+
+                    <div class="next-item">
+                        <div>🥔</div>
+                        <section>
+                            <b>Potato Inspection</b>
+                            <small>Oct 10 · 10:30 AM</small>
+                        </section>
+                    </div>
+
+                    <div class="next-item">
+                        <div>🌾</div>
+                        <section>
+                            <b>Wheat Harvest</b>
+                            <small>25 Days Remaining</small>
+                        </section>
+                    </div>
+
+                </div>
+
+
+                <div class="activity-tip">
+
+                    <div class="tip-icon">💡</div>
+
+                    <h2>Today's Tip</h2>
+
+                    <p>
+                        Check soil moisture before irrigation.
+                        Proper water management helps maintain healthy crops.
+                    </p>
+
+                    <a href="expert.html">Get Expert Advice →</a>
+
+                </div>
+
+
+                <div class="activity-calendar">
+
+                    <h2>October 2026</h2>
+
+                    <div class="calendar-days">
+                        <span>M</span>
+                        <span>T</span>
+                        <span>W</span>
+                        <span>T</span>
+                        <span>F</span>
+                        <span>S</span>
+                        <span>S</span>
+                    </div>
+
+                    <div class="calendar-date">
+                        <span>1</span><span>2</span><span>3</span>
+                        <span>4</span><span>5</span><span>6</span>
+                        <b>7</b><span>8</span><span>9</span>
+                        <span>10</span><span>11</span><span>12</span>
+                        <span>13</span><span>14</span><span>15</span>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

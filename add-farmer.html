@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Farmer | Digital Agriculture Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html" class="active">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content add-farmer-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Add Farmer</h1>
+                    <p>Register a new farmer on the Digital Agriculture platform.</p>
+                </div>
+
+                <a href="admin-farmers.html" class="back-farmer-btn">
+                    ← Back to Farmers
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <section class="panel add-farmer-panel">
+
+
+                <div class="add-farmer-intro">
+
+                    <div class="add-farmer-icon">
+                        ♙
+                    </div>
+
+                    <div>
+                        <h2>Farmer Information</h2>
+                        <p>
+                            Enter the basic information of the farmer.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <form class="farmer-form">
+
+
+                    <!-- PERSONAL INFORMATION -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+                            <span>01</span>
+                            <div>
+                                <strong>Personal Information</strong>
+                                <small>Basic details of the farmer</small>
+                            </div>
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label>
+                                    Full Name
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter farmer name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Mobile Number
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    placeholder="Enter mobile number"
+                                    maxlength="10"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Email Address</label>
+
+                                <input
+                                    type="email"
+                                    placeholder="Enter email address"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Gender</label>
+
+                                <select>
+                                    <option>Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LOCATION INFORMATION -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span>02</span>
+
+                            <div>
+                                <strong>Location Details</strong>
+                                <small>Farmer's current location</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    State
+                                    <b>*</b>
+                                </label>
+
+                                <select required>
+
+                                    <option>Select State</option>
+                                    <option>Rajasthan</option>
+                                    <option>Bihar</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Haryana</option>
+                                    <option>Punjab</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Gujarat</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    District
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter district"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Village / City</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter village or city"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>PIN Code</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter PIN code"
+                                    maxlength="6"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FARMING INFORMATION -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span>03</span>
+
+                            <div>
+                                <strong>Farming Details</strong>
+                                <small>Information about farming activities</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Main Crop
+                                    <b>*</b>
+                                </label>
+
+                                <select required>
+
+                                    <option>Select Main Crop</option>
+                                    <option>Wheat</option>
+                                    <option>Rice</option>
+                                    <option>Maize</option>
+                                    <option>Mustard</option>
+                                    <option>Cotton</option>
+                                    <option>Bajra</option>
+                                    <option>Sugarcane</option>
+                                    <option>Pulses</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Farming Type</label>
+
+                                <select>
+
+                                    <option>Select Farming Type</option>
+                                    <option>Organic</option>
+                                    <option>Conventional</option>
+                                    <option>Mixed Farming</option>
+                                    <option>Natural Farming</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Land Area</label>
+
+                                <input
+                                    type="number"
+                                    placeholder="Enter land area"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Land Unit</label>
+
+                                <select>
+
+                                    <option>Acres</option>
+                                    <option>Hectares</option>
+                                    <option>Bigha</option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACCOUNT INFORMATION -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-title">
+
+                            <span>04</span>
+
+                            <div>
+                                <strong>Account Details</strong>
+                                <small>Platform account information</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Username
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Create username"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>
+                                    Password
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="password"
+                                    placeholder="Create password"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label>Status</label>
+
+                                <select>
+
+                                    <option>Active</option>
+                                    <option>Pending</option>
+                                    <option>Inactive</option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIONS -->
+
+                    <div class="form-actions">
+
+                        <a
+                            href="admin-farmers.html"
+                            class="cancel-farmer-btn"
+                        >
+                            Cancel
+                        </a>
+
+                        <button
+                            type="reset"
+                            class="reset-farmer-btn"
+                        >
+                            Reset
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="save-farmer-btn"
+                        >
+                            ✓ Add Farmer
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+        </div>
+        <!-- END ADMIN CONTENT -->
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+    <!-- END ADMIN MAIN -->
+
+
+</div>
+<!-- END ADMIN LAYOUT -->
+
+
+</body>
+</html>

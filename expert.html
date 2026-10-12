@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Advice - Digital Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="crops-page">
+
+    <aside class="sidebar">
+
+        <div class="dashboard-logo">
+            <span>🌿</span>
+            <h2>Digital Agriculture</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="sidebar-link">
+                <span>📊</span> Dashboard
+            </a>
+
+            <a href="crops.html" class="sidebar-link">
+                <span>🌱</span> My Crops
+            </a>
+
+            <a href="weather.html" class="sidebar-link">
+                <span>☁️</span> Weather
+            </a>
+
+            <a href="market.html" class="sidebar-link">
+                <span>💰</span> Market Prices
+            </a>
+
+            <a href="expert.html" class="sidebar-link active">
+                <span>👨‍🌾</span> Expert Advice
+            </a>
+            <a href="activities.html" class="sidebar-link">
+                    <span>📋</span>
+                    My Activities
+                </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="sidebar-link">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="sidebar-link logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="crops-main">
+
+        <div class="expert-top">
+
+            <div>
+                <h1>Expert Advice</h1>
+                <p>Connect with agriculture experts and get solutions for your farm.</p>
+            </div>
+
+            <button class="ask-btn" onclick="openQuestion()">＋ Ask a Question</button>
+
+        </div>
+
+
+        <section class="expert-hero">
+
+            <div>
+                <span class="live-status">● 18 Experts Online</span>
+
+                <h2>Get Expert Help for Your Farm</h2>
+
+                <p>
+                    Ask questions, discuss crop problems and get professional
+                    recommendations from verified agriculture specialists.
+                </p>
+
+                <div class="hero-stats">
+                    <span>⭐ 4.8 Average Rating</span>
+                    <span>👨‍🌾 120+ Experts</span>
+                    <span>💬 8,500+ Questions</span>
+                </div>
+            </div>
+
+            <div class="hero-farmer">👨‍🌾</div>
+
+        </section>
+
+
+        <div class="expert-tools">
+
+            <input type="text" placeholder="🔍 Search expert or farming topic">
+
+            <select>
+                <option>All Categories</option>
+                <option>Crop Management</option>
+                <option>Pest & Disease</option>
+                <option>Soil & Fertilizer</option>
+                <option>Irrigation</option>
+                <option>Organic Farming</option>
+            </select>
+
+        </div>
+
+
+        <h2 class="expert-heading">Recommended Experts</h2>
+
+
+        <div class="expert-grid">
+
+            <div class="expert-profile">
+
+                <div class="profile-top">
+                    <div class="expert-avatar">👨‍🌾</div>
+                    <span class="available">● Available</span>
+                </div>
+
+                <h3>Dr. Rajesh Kumar</h3>
+                <p class="designation">Crop & Soil Specialist</p>
+
+                <div class="tags">
+                    <span>Wheat</span>
+                    <span>Soil</span>
+                    <span>Fertilizer</span>
+                </div>
+
+                <div class="profile-info">
+                    <span>⭐ 4.9</span>
+                    <span>🎓 12 Years</span>
+                    <span>💬 340+</span>
+                </div>
+
+                <button onclick="alert('Consultation request sent!')">
+                    Consult Expert
+                </button>
+
+            </div>
+
+
+            <div class="expert-profile">
+
+                <div class="profile-top">
+                    <div class="expert-avatar">👩‍🌾</div>
+                    <span class="available">● Available</span>
+                </div>
+
+                <h3>Dr. Neha Sharma</h3>
+                <p class="designation">Plant Disease Specialist</p>
+
+                <div class="tags">
+                    <span>Disease</span>
+                    <span>Pest</span>
+                    <span>Tomato</span>
+                </div>
+
+                <div class="profile-info">
+                    <span>⭐ 4.8</span>
+                    <span>🎓 9 Years</span>
+                    <span>💬 280+</span>
+                </div>
+
+                <button onclick="alert('Consultation request sent!')">
+                    Consult Expert
+                </button>
+
+            </div>
+
+
+            <div class="expert-profile">
+
+                <div class="profile-top">
+                    <div class="expert-avatar">👨‍🔬</div>
+                    <span class="busy">● Busy</span>
+                </div>
+
+                <h3>Dr. Amit Singh</h3>
+                <p class="designation">Irrigation Specialist</p>
+
+                <div class="tags">
+                    <span>Irrigation</span>
+                    <span>Water</span>
+                    <span>Modern Farming</span>
+                </div>
+
+                <div class="profile-info">
+                    <span>⭐ 4.7</span>
+                    <span>🎓 10 Years</span>
+                    <span>💬 215+</span>
+                </div>
+
+                <button class="disabled-btn">
+                    Currently Busy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="expert-bottom">
+
+            <section class="questions">
+
+                <div class="heading-row">
+                    <div>
+                        <h2>Recent Questions</h2>
+                        <p>Common problems asked by farmers</p>
+                    </div>
+                    <a href="#">View All →</a>
+                </div>
+
+                <div class="question">
+                    <span>🌾</span>
+                    <div>
+                        <h3>Why are my wheat leaves turning yellow?</h3>
+                        <p>Answered by Dr. Rajesh Kumar • 2 hours ago</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <span>🍅</span>
+                    <div>
+                        <h3>How can I prevent tomato leaf disease?</h3>
+                        <p>Answered by Dr. Neha Sharma • 5 hours ago</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <span>💧</span>
+                    <div>
+                        <h3>How often should I irrigate my crops?</h3>
+                        <p>Answered by Dr. Amit Singh • Yesterday</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section class="quick-advice">
+
+                <span>💡</span>
+
+                <h2>Quick Farming Tip</h2>
+
+                <p>
+                    Check soil moisture before irrigation. Overwatering can
+                    damage roots and reduce crop growth.
+                </p>
+
+                <a href="#">Read More →</a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<div class="question-modal" id="questionModal">
+
+    <div class="question-box">
+
+        <button class="close-btn" onclick="closeQuestion()">×</button>
+
+        <h2>Ask an Expert</h2>
+        <p>Describe your farming problem.</p>
+
+        <select>
+            <option>Select Category</option>
+            <option>Crop Problem</option>
+            <option>Pest & Disease</option>
+            <option>Soil</option>
+            <option>Irrigation</option>
+        </select>
+
+        <input type="text" placeholder="Crop name">
+
+        <textarea placeholder="Describe your problem..."></textarea>
+
+        <button onclick="submitQuestion()">Submit Question</button>
+
+    </div>
+
+</div>
+
+
+<script>
+function openQuestion() {
+    document.getElementById("questionModal").style.display = "flex";
+}
+
+function closeQuestion() {
+    document.getElementById("questionModal").style.display = "none";
+}
+
+function submitQuestion() {
+    alert("Your question has been submitted!");
+    closeQuestion();
+}
+</script>
+
+</body>
+</html>

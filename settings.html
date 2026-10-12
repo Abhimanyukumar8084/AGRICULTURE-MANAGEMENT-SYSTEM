@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Digital Agriculture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="settings-page">
+
+    <aside class="sidebar">
+
+        <div class="dashboard-logo">
+            <span>🌿</span>
+            <h2>Digital Agriculture</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="sidebar-link">
+                <span>📊</span> Dashboard
+            </a>
+
+            <a href="crops.html" class="sidebar-link">
+                <span>🌱</span> My Crops
+            </a>
+
+            <a href="weather.html" class="sidebar-link">
+                <span>☁️</span> Weather
+            </a>
+
+            <a href="market.html" class="sidebar-link">
+                <span>💰</span> Market Prices
+            </a>
+
+            <a href="expert.html" class="sidebar-link">
+                <span>👨‍🌾</span> Expert Advice
+            </a>
+
+            <a href="activities.html" class="sidebar-link">
+                <span>📋</span> My Activities
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="sidebar-link active">
+                <span>⚙️</span> Settings
+            </a>
+
+            <a href="index.html" class="sidebar-link logout">
+                <span>🚪</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="crops-main">
+
+        <div class="settings-header">
+            <div>
+                <h1>Settings</h1>
+                <p>Manage your account and preferences</p>
+            </div>
+
+            <button class="settings-save" onclick="alert('Settings saved successfully!'); window.location.href='dashboard.html';">
+                Save Changes
+            </button>
+        </div>
+
+
+        <div class="settings-layout">
+
+            <div class="settings-card">
+
+                <div class="settings-title">
+                    <span>👤</span>
+
+                    <div>
+                        <h2>Profile Information</h2>
+                        <p>Update your personal information</p>
+                    </div>
+                </div>
+
+                <div class="settings-form">
+
+                    <label>
+                        Full Name
+                        <input type="text" value="Krishan Kumar">
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="email" value="krishan@example.com">
+                    </label>
+
+                    <label>
+                        Phone
+                        <input type="text" value="+91 9876543210">
+                    </label>
+
+                    <label>
+                        Location
+                        <input type="text" value="Jaipur, Rajasthan">
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-card">
+
+                <div class="settings-title">
+                    <span>🚜</span>
+
+                    <div>
+                        <h2>Farm Details</h2>
+                        <p>Manage your farm information</p>
+                    </div>
+                </div>
+
+                <div class="settings-form">
+
+                    <label>
+                        Farm Name
+                        <input type="text" value="My Green Farm">
+                    </label>
+
+                    <label>
+                        Farm Area
+                        <input type="text" value="42 Acres">
+                    </label>
+
+                    <label>
+                        Soil Type
+                        <select>
+                            <option>Loamy Soil</option>
+                            <option>Clay Soil</option>
+                            <option>Sandy Soil</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Irrigation
+                        <select>
+                            <option>Drip Irrigation</option>
+                            <option>Sprinkler</option>
+                            <option>Canal</option>
+                        </select>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="settings-card">
+
+                <div class="settings-title">
+                    <span>🔔</span>
+
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Manage your notifications</p>
+                    </div>
+                </div>
+
+                <div class="setting-option">
+                    <div>
+                        <strong>Weather Alerts</strong>
+                        <small>Receive weather updates</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+                </div>
+
+                <div class="setting-option">
+                    <div>
+                        <strong>Market Updates</strong>
+                        <small>Receive crop price updates</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+                </div>
+
+                <div class="setting-option">
+                    <div>
+                        <strong>Activity Reminders</strong>
+                        <small>Receive farming activity reminders</small>
+                    </div>
+
+                    <input type="checkbox" checked>
+                </div>
+
+            </div>
+
+
+            <div class="settings-card">
+
+                <div class="settings-title">
+                    <span>🔐</span>
+
+                    <div>
+                        <h2>Security</h2>
+                        <p>Manage account security</p>
+                    </div>
+                </div>
+
+                <div class="security-row">
+
+                    <div>
+                        <strong>Password</strong>
+                        <small>Change your account password</small>
+                    </div>
+
+                    <button>Change</button>
+
+                </div>
+
+                <div class="security-row">
+
+                    <div>
+                        <strong>Two-Factor Authentication</strong>
+                        <small>Add extra account security</small>
+                    </div>
+
+                    <button>Enable</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

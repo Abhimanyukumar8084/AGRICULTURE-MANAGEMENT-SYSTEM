@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Prices | Digital Agriculture Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html" class="active">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="admin-main">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content market-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Market Prices</h1>
+                    <p>Monitor crop prices and market trends.</p>
+                </div>
+
+                <div class="market-date">
+                    <span>Last Updated</span>
+                    <strong>08 Oct 2026</strong>
+                </div>
+
+            </div>
+
+
+            <!-- MARKET FILTER -->
+
+            <div class="market-filter">
+
+                <div class="market-select">
+
+                    <label>Market</label>
+
+                    <select>
+                        <option>All Markets</option>
+                        <option>Jaipur Mandi</option>
+                        <option>Kota Mandi</option>
+                        <option>Bharatpur Mandi</option>
+                        <option>Ajmer Mandi</option>
+                    </select>
+
+                </div>
+
+
+                <div class="market-select">
+
+                    <label>Crop</label>
+
+                    <select>
+                        <option>All Crops</option>
+                        <option>Wheat</option>
+                        <option>Rice</option>
+                        <option>Maize</option>
+                        <option>Mustard</option>
+                        <option>Cotton</option>
+                    </select>
+
+                </div>
+
+
+                <div class="market-select">
+
+                    <label>Period</label>
+
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                    </select>
+
+                </div>
+
+
+                <button class="apply-filter">
+                    Apply Filter
+                </button>
+
+            </div>
+
+
+            <!-- PRICE CARDS -->
+
+            <div class="market-stats">
+
+                <div class="market-stat">
+
+                    <div class="market-stat-icon green-market">
+                        ₹
+                    </div>
+
+                    <div>
+                        <span>Average Market Price</span>
+                        <strong>₹3,860</strong>
+                        <small class="up">↑ 4.8% this week</small>
+                    </div>
+
+                </div>
+
+
+                <div class="market-stat">
+
+                    <div class="market-stat-icon blue-market">
+                        ↑
+                    </div>
+
+                    <div>
+                        <span>Highest Price</span>
+                        <strong>₹7,850</strong>
+                        <small>Mustard</small>
+                    </div>
+
+                </div>
+
+
+                <div class="market-stat">
+
+                    <div class="market-stat-icon orange-market">
+                        ↓
+                    </div>
+
+                    <div>
+                        <span>Lowest Price</span>
+                        <strong>₹2,180</strong>
+                        <small>Maize</small>
+                    </div>
+
+                </div>
+
+
+                <div class="market-stat">
+
+                    <div class="market-stat-icon purple-market">
+                        ◉
+                    </div>
+
+                    <div>
+                        <span>Markets Tracked</span>
+                        <strong>24</strong>
+                        <small>Across Rajasthan</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRAPH + TOP MOVERS -->
+
+            <div class="market-grid">
+
+
+                <!-- PRICE GRAPH -->
+
+                <section class="panel price-chart-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Price Trend</h2>
+                            <p>Average wheat price over the last 7 days</p>
+                        </div>
+
+                        <div class="chart-price">
+                            ₹2,606 / q
+                        </div>
+
+                    </div>
+
+
+                    <div class="price-chart">
+
+                        <div class="chart-y">
+                            <span>2800</span>
+                            <span>2700</span>
+                            <span>2600</span>
+                            <span>2500</span>
+                            <span>2400</span>
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div class="grid-line line-1"></div>
+                            <div class="grid-line line-2"></div>
+                            <div class="grid-line line-3"></div>
+                            <div class="grid-line line-4"></div>
+                            <div class="grid-line line-5"></div>
+
+
+                            <svg
+                                class="price-line"
+                                viewBox="0 0 700 230"
+                                preserveAspectRatio="none"
+                            >
+
+                                <defs>
+
+                                    <linearGradient
+                                        id="marketGradient"
+                                        x1="0"
+                                        y1="0"
+                                        x2="0"
+                                        y2="1"
+                                    >
+                                        <stop
+                                            offset="0%"
+                                            stop-color="#08a653"
+                                            stop-opacity=".22"
+                                        />
+
+                                        <stop
+                                            offset="100%"
+                                            stop-color="#08a653"
+                                            stop-opacity="0"
+                                        />
+                                    </linearGradient>
+
+                                </defs>
+
+
+                                <path
+                                    d="M0 170
+                                       L100 150
+                                       L200 165
+                                       L300 105
+                                       L400 120
+                                       L500 75
+                                       L600 90
+                                       L700 45
+                                       L700 230
+                                       L0 230 Z"
+                                    fill="url(#marketGradient)"
+                                />
+
+                                <path
+                                    d="M0 170
+                                       L100 150
+                                       L200 165
+                                       L300 105
+                                       L400 120
+                                       L500 75
+                                       L600 90
+                                       L700 45"
+                                    fill="none"
+                                    stroke="#08a653"
+                                    stroke-width="3"
+                                />
+
+                                <circle cx="0" cy="170" r="4"/>
+                                <circle cx="100" cy="150" r="4"/>
+                                <circle cx="200" cy="165" r="4"/>
+                                <circle cx="300" cy="105" r="4"/>
+                                <circle cx="400" cy="120" r="4"/>
+                                <circle cx="500" cy="75" r="4"/>
+                                <circle cx="600" cy="90" r="4"/>
+                                <circle cx="700" cy="45" r="4"/>
+
+                            </svg>
+
+
+                            <div class="chart-dates">
+                                <span>02 Oct</span>
+                                <span>03 Oct</span>
+                                <span>04 Oct</span>
+                                <span>05 Oct</span>
+                                <span>06 Oct</span>
+                                <span>07 Oct</span>
+                                <span>08 Oct</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- TOP MOVERS -->
+
+                <section class="panel movers-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Today's Movers</h2>
+                            <p>Biggest price changes</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mover-list">
+
+
+                        <div class="mover">
+
+                            <div class="mover-icon wheat-mover">
+                                🌾
+                            </div>
+
+                            <div class="mover-info">
+                                <strong>Wheat</strong>
+                                <span>₹2,606 / q</span>
+                            </div>
+
+                            <b class="positive">
+                                +5.2%
+                            </b>
+
+                        </div>
+
+
+                        <div class="mover">
+
+                            <div class="mover-icon rice-mover">
+                                🌾
+                            </div>
+
+                            <div class="mover-info">
+                                <strong>Rice</strong>
+                                <span>₹3,700 / q</span>
+                            </div>
+
+                            <b class="positive">
+                                +3.4%
+                            </b>
+
+                        </div>
+
+
+                        <div class="mover">
+
+                            <div class="mover-icon maize-mover">
+                                🌽
+                            </div>
+
+                            <div class="mover-info">
+                                <strong>Maize</strong>
+                                <span>₹2,300 / q</span>
+                            </div>
+
+                            <b class="negative">
+                                -2.1%
+                            </b>
+
+                        </div>
+
+
+                        <div class="mover">
+
+                            <div class="mover-icon mustard-mover">
+                                🌼
+                            </div>
+
+                            <div class="mover-info">
+                                <strong>Mustard</strong>
+                                <span>₹7,850 / q</span>
+                            </div>
+
+                            <b class="positive">
+                                +6.7%
+                            </b>
+
+                        </div>
+
+
+                        <div class="mover">
+
+                            <div class="mover-icon cotton-mover">
+                                ☁
+                            </div>
+
+                            <div class="mover-info">
+                                <strong>Cotton</strong>
+                                <span>₹8,300 / q</span>
+                            </div>
+
+                            <b class="negative">
+                                -1.4%
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- PRICE TABLE -->
+
+            <section class="panel market-table-panel">
+
+                <div class="market-table-header">
+
+                    <div>
+                        <h2>Crop Market Prices</h2>
+                        <p>Current indicative prices by commodity</p>
+                    </div>
+
+                    <button class="export-btn">
+                        ↓ Export
+                    </button>
+
+                </div>
+
+
+                <div class="market-table-wrapper">
+
+                    <table class="market-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Crop</th>
+                                <th>Market</th>
+                                <th>Min Price</th>
+                                <th>Max Price</th>
+                                <th>Modal Price</th>
+                                <th>Change</th>
+                                <th>MSP</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="market-crop">
+                                        <span>🌾</span>
+                                        <strong>Wheat</strong>
+                                    </div>
+                                </td>
+
+                                <td>Kota</td>
+
+                                <td>₹2,491</td>
+
+                                <td>₹2,796</td>
+
+                                <td class="modal-price">₹2,606</td>
+
+                                <td>
+                                    <span class="price-up">
+                                        ↑ 5.2%
+                                    </span>
+                                </td>
+
+                                <td>₹2,585</td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="market-crop">
+                                        <span>🌾</span>
+                                        <strong>Rice</strong>
+                                    </div>
+                                </td>
+
+                                <td>Jaipur</td>
+
+                                <td>₹2,400</td>
+
+                                <td>₹6,070</td>
+
+                                <td class="modal-price">₹3,700</td>
+
+                                <td>
+                                    <span class="price-up">
+                                        ↑ 3.4%
+                                    </span>
+                                </td>
+
+                                <td>₹2,441</td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="market-crop">
+                                        <span>🌽</span>
+                                        <strong>Maize</strong>
+                                    </div>
+                                </td>
+
+                                <td>Ajmer</td>
+
+                                <td>₹1,685</td>
+
+                                <td>₹2,585</td>
+
+                                <td class="modal-price">₹2,300</td>
+
+                                <td>
+                                    <span class="price-down">
+                                        ↓ 2.1%
+                                    </span>
+                                </td>
+
+                                <td>₹2,410</td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="market-crop">
+                                        <span>🌼</span>
+                                        <strong>Mustard</strong>
+                                    </div>
+                                </td>
+
+                                <td>Bharatpur</td>
+
+                                <td>₹7,141</td>
+
+                                <td>₹8,150</td>
+
+                                <td class="modal-price">₹7,850</td>
+
+                                <td>
+                                    <span class="price-up">
+                                        ↑ 6.7%
+                                    </span>
+                                </td>
+
+                                <td>₹6,613</td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="market-crop">
+                                        <span>☁</span>
+                                        <strong>Cotton</strong>
+                                    </div>
+                                </td>
+
+                                <td>Jodhpur</td>
+
+                                <td>₹7,890</td>
+
+                                <td>₹8,625</td>
+
+                                <td class="modal-price">₹8,300</td>
+
+                                <td>
+                                    <span class="price-down">
+                                        ↓ 1.4%
+                                    </span>
+                                </td>
+
+                                <td>₹8,267</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- MARKET INSIGHT -->
+
+            <div class="market-insight">
+
+                <div class="insight-icon">
+                    💡
+                </div>
+
+                <div>
+                    <strong>Market Insight</strong>
+
+                    <p>
+                        Mustard is currently showing the strongest upward
+                        movement among the tracked crops, while maize has
+                        experienced a small decline.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
