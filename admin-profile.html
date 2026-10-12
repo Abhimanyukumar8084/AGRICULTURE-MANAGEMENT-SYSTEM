@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Administrator Profile | Digital Agriculture</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+
+            <a href="admin-profile.html" class="admin-account">
+
+                <div class="notification">
+                    ♢
+                    <span></span>
+                </div>
+
+                <div class="account-divider"></div>
+
+                <div class="account-avatar">
+                    A
+                </div>
+
+                <div class="account-details">
+                    <strong>Administrator</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <div class="account-arrow">
+                    ▾
+                </div>
+
+            </a>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content profile-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Administrator Profile</h1>
+                    <p>Manage your administrator account and personal information.</p>
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PROFILE LAYOUT ================= -->
+
+            <div class="profile-layout">
+
+
+                <!-- ================= LEFT PROFILE CARD ================= -->
+
+                <section class="profile-card">
+
+                    <div class="profile-cover"></div>
+
+
+                    <div class="profile-main">
+
+                        <div class="profile-avatar">
+                            A
+                        </div>
+
+                        <h2>Administrator</h2>
+
+                        <p>Super Administrator</p>
+
+
+                        <div class="profile-status">
+
+                            <span></span>
+
+                            Active Account
+
+                        </div>
+
+
+                        <div class="profile-side-info">
+
+
+                            <div class="side-info-row">
+
+                                <span>
+                                    Email
+                                </span>
+
+                                <strong>
+                                    admin@digitalagri.com
+                                </strong>
+
+                            </div>
+
+
+                            <div class="side-info-row">
+
+                                <span>
+                                    Role
+                                </span>
+
+                                <strong>
+                                    Super Admin
+                                </strong>
+
+                            </div>
+
+
+                            <div class="side-info-row">
+
+                                <span>
+                                    Joined
+                                </span>
+
+                                <strong>
+                                    January 2026
+                                </strong>
+
+                            </div>
+
+
+                            <div class="side-info-row">
+
+                                <span>
+                                    Last Login
+                                </span>
+
+                                <strong>
+                                    Today, 10:42 AM
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ================= RIGHT PROFILE DETAILS ================= -->
+
+                <section class="profile-details">
+
+
+                    <div class="profile-details-header">
+
+
+                        <div>
+
+                            <h3>
+                                Personal Information
+                            </h3>
+
+                            <p>
+                                View and update your administrator information.
+                            </p>
+
+                        </div>
+
+
+                        <div class="profile-header-actions">
+
+
+                            <a
+                                href="admin-dashboard.html"
+                                class="back-dashboard-btn"
+                            >
+                                ← Back to Dashboard
+                            </a>
+
+
+                            <button
+                                type="button"
+                                class="edit-profile-btn"
+                                id="editProfileBtn"
+                            >
+                                Edit Profile
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                form="profileForm"
+                                class="save-profile-btn"
+                                id="saveProfileBtn"
+                            >
+                                Save Changes
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= PROFILE FORM ================= -->
+
+                    <form
+                        class="profile-form"
+                        id="profileForm"
+                    >
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Administrator"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                value="admin"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                value="admin@digitalagri.com"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="text"
+                                value="+91 98765 43210"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Role
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Super Administrator"
+                                readonly
+                            >
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Account Status
+                            </label>
+
+                            <select disabled>
+
+                                <option selected>
+                                    Active
+                                </option>
+
+                                <option>
+                                    Inactive
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="profile-field full">
+
+                            <label>
+                                Address
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Digital Agriculture Administration Office"
+                                disabled
+                            >
+
+                        </div>
+
+
+                    </form>
+
+
+
+                    <!-- ================= SECURITY ================= -->
+
+                    <div class="account-security">
+
+
+                        <h4>
+                            Account Security
+                        </h4>
+
+
+                        <div class="security-item">
+
+
+                            <div>
+
+                                <strong>
+                                    Password
+                                </strong>
+
+                                <span>
+                                    Last changed 30 days ago
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="change-password.html"
+                                class="security-action"
+                            >
+                                Change Password
+                            </a>
+
+
+                        </div>
+
+
+
+                        <div class="security-item">
+
+
+                            <div>
+
+                                <strong>
+                                    Two-Factor Authentication
+                                </strong>
+
+                                <span>
+                                    Add an extra layer of account security.
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                href="admin-settings.html"
+                                class="security-action"
+                            >
+                                Manage
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Help
+                </a>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- ================= EDIT / SAVE SCRIPT ================= -->
+
+<script>
+
+    const editButton = document.getElementById("editProfileBtn");
+    const saveButton = document.getElementById("saveProfileBtn");
+    const form = document.getElementById("profileForm");
+
+    const editableFields = form.querySelectorAll(
+        "input:not([readonly]), select"
+    );
+
+
+    editButton.addEventListener("click", function () {
+
+        editableFields.forEach(function (field) {
+            field.disabled = false;
+        });
+
+        editButton.style.display = "none";
+
+        saveButton.style.display = "inline-flex";
+
+        editableFields[0].focus();
+
+    });
+
+
+    form.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        alert("Profile changes saved successfully.");
+
+        editableFields.forEach(function (field) {
+            field.disabled = true;
+        });
+
+        editButton.style.display = "inline-flex";
+
+        saveButton.style.display = "none";
+
+    });
+
+</script>
+
+</body>
+</html>

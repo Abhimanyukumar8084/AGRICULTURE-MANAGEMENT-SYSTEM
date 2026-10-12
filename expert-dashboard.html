@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Agriculture - Expert Dashboard</title>
+    <link rel="stylesheet" href="expert.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo-box">
+            <div class="logo">🌿</div>
+            <div class="logo-text">
+                <strong>Digital Agriculture</strong>
+                <span>Expert Portal</span>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <a href="expert-dashboard.html" class="active">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="farmer-queries.html">
+                <span class="menu-icon">♧</span>
+                <span>Farmer Queries</span>
+            </a>
+
+            <a href="expert-consult.html">
+                <span class="menu-icon">◷</span>
+                <span>My Consultations</span>
+            </a>
+
+            <a href="crop-problems.html">
+                <span class="menu-icon">⚠</span>
+                <span>Crop Problems</span>
+            </a>
+
+            <a href="previous-consultations.html">
+                <span class="menu-icon">▤</span>
+                <span>Previous Consultations</span>
+            </a>
+
+            <a href="login.html">
+                <span class="menu-icon">⇥</span>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="header">
+
+            <div class="header-left">
+                <button class="menu-button">☰</button>
+
+                <div>
+                    <h1>Expert Dashboard</h1>
+                    <p>Manage farms, consultations and crop health</p>
+                </div>
+            </div>
+
+            <a href="expert-profile.html" class="expert-profile">
+
+                <div class="notification">♢</div>
+
+                <div class="profile-line"></div>
+
+                <div class="profile-avatar">DS</div>
+
+                <div class="profile-info">
+                    <strong>Dr. Sharma</strong>
+                    <span>Agriculture Expert</span>
+                </div>
+
+                <div class="profile-arrow">▾</div>
+
+            </a>
+
+        </header>
+
+
+        <section class="content">
+
+            <div class="welcome-section">
+
+                <div>
+                    <span class="welcome-tag">GOOD MORNING, EXPERT</span>
+
+                    <h2>Welcome back, Dr. Sharma</h2>
+
+                    <p>
+                        Here's what's happening with your farms and consultations today.
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon green">🌾</div>
+                    <div>
+                        <span>Active Farms</span>
+                        <strong>24</strong>
+                        <small>↑ 12% this month</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">👨‍🌾</div>
+                    <div>
+                        <span>Farmers Assisted</span>
+                        <strong>186</strong>
+                        <small>↑ 18% this month</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">💬</div>
+                    <div>
+                        <span>Pending Queries</span>
+                        <strong>08</strong>
+                        <small class="warning-text">Needs attention</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📋</div>
+                    <div>
+                        <span>Consultations</span>
+                        <strong>32</strong>
+                        <small>↑ 6 this week</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+
+                <div class="panel field-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Field Health Overview</h3>
+                            <p>Current condition of monitored fields</p>
+                        </div>
+
+                        <a href="#">View All →</a>
+                    </div>
+
+
+                    <div class="health-summary">
+
+                        <div class="health-circle">
+                            <div>
+                                <strong>76%</strong>
+                                <span>Overall</span>
+                            </div>
+                        </div>
+
+                        <div class="health-status">
+
+                            <div>
+                                <span><i class="healthy"></i>Healthy</span>
+                                <b>76%</b>
+                            </div>
+
+                            <div>
+                                <span><i class="moderate"></i>Moderate</span>
+                                <b>17%</b>
+                            </div>
+
+                            <div>
+                                <span><i class="critical"></i>Critical</span>
+                                <b>7%</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="crop-list">
+
+                        <div class="crop-row">
+
+                            <div class="crop-title">
+                                <div class="crop-symbol">🌾</div>
+                                <div>
+                                    <strong>Wheat Field</strong>
+                                    <small>Farm A</small>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:88%"></span>
+                            </div>
+
+                            <b>88%</b>
+
+                        </div>
+
+
+                        <div class="crop-row">
+
+                            <div class="crop-title">
+                                <div class="crop-symbol">🌱</div>
+                                <div>
+                                    <strong>Rice Field</strong>
+                                    <small>Farm B</small>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:76%"></span>
+                            </div>
+
+                            <b>76%</b>
+
+                        </div>
+
+
+                        <div class="crop-row">
+
+                            <div class="crop-title">
+                                <div class="crop-symbol">🥬</div>
+                                <div>
+                                    <strong>Vegetable Field</strong>
+                                    <small>Farm C</small>
+                                </div>
+                            </div>
+
+                            <div class="progress attention">
+                                <span style="width:54%"></span>
+                            </div>
+
+                            <b>54%</b>
+
+                        </div>
+
+
+                        <div class="crop-row">
+
+                            <div class="crop-title">
+                                <div class="crop-symbol">🌽</div>
+                                <div>
+                                    <strong>Corn Field</strong>
+                                    <small>Farm D</small>
+                                </div>
+                            </div>
+
+                            <div class="progress">
+                                <span style="width:92%"></span>
+                            </div>
+
+                            <b>92%</b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel weather-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Today's Weather</h3>
+                            <p>Jaipur, Rajasthan</p>
+                        </div>
+
+                        <span class="live">● LIVE</span>
+
+                    </div>
+
+
+                    <div class="weather-main">
+
+                        <div class="sun">☀️</div>
+
+                        <div>
+                            <strong>28°C</strong>
+                            <span>Sunny · Feels like 30°C</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="weather-details">
+
+                        <div>
+                            <span>💧</span>
+                            <small>Humidity</small>
+                            <b>62%</b>
+                        </div>
+
+                        <div>
+                            <span>💨</span>
+                            <small>Wind</small>
+                            <b>14 km/h</b>
+                        </div>
+
+                        <div>
+                            <span>🌧️</span>
+                            <small>Rain</small>
+                            <b>10%</b>
+                        </div>
+
+                        <div>
+                            <span>🌡️</span>
+                            <small>Pressure</small>
+                            <b>1012 hPa</b>
+                        </div>
+
+                    </div>
+
+
+                    <div class="weather-tip">
+                        <strong>💡 Farming Tip</strong>
+                        <p>Good conditions for field inspection today.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="panel queries-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Recent Farmer Queries</h3>
+                            <p>Latest questions requiring attention</p>
+                        </div>
+
+                        <a href="#">View All →</a>
+                    </div>
+
+
+                    <div class="query-list">
+
+                        <div class="query-row">
+
+                            <div class="farmer-avatar avatar-green">RS</div>
+
+                            <div class="query-info">
+                                <strong>Rajesh Singh</strong>
+                                <p>My wheat leaves are turning yellow. What should I do?</p>
+                                <small>10 minutes ago</small>
+                            </div>
+
+                            <span class="priority high">High</span>
+
+                        </div>
+
+
+                        <div class="query-row">
+
+                            <div class="farmer-avatar avatar-blue">AK</div>
+
+                            <div class="query-info">
+                                <strong>Amit Kumar</strong>
+                                <p>Please suggest the best fertilizer for my rice crop.</p>
+                                <small>32 minutes ago</small>
+                            </div>
+
+                            <span class="priority medium">Medium</span>
+
+                        </div>
+
+
+                        <div class="query-row">
+
+                            <div class="farmer-avatar avatar-orange">SP</div>
+
+                            <div class="query-info">
+                                <strong>Suresh Patel</strong>
+                                <p>Is irrigation required for my vegetable field?</p>
+                                <small>1 hour ago</small>
+                            </div>
+
+                            <span class="priority low">Low</span>
+
+                        </div>
+
+
+                        <div class="query-row">
+
+                            <div class="farmer-avatar avatar-purple">MV</div>
+
+                            <div class="query-info">
+                                <strong>Manoj Verma</strong>
+                                <p>There are insects on my tomato plants.</p>
+                                <small>2 hours ago</small>
+                            </div>
+
+                            <span class="priority high">High</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel consultations-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Upcoming Consultations</h3>
+                            <p>Your scheduled farmer meetings</p>
+                        </div>
+
+                        <a href="#">View All →</a>
+
+                    </div>
+
+
+                    <div class="meeting">
+
+                        <div class="meeting-time">
+                            <strong>10:30</strong>
+                            <span>AM</span>
+                        </div>
+
+                        <i class="meeting-dot"></i>
+
+                        <div class="meeting-info">
+                            <strong>Ramesh Yadav</strong>
+                            <span>Crop disease consultation</span>
+                        </div>
+
+                        <button>Join</button>
+
+                    </div>
+
+
+                    <div class="meeting">
+
+                        <div class="meeting-time">
+                            <strong>12:00</strong>
+                            <span>PM</span>
+                        </div>
+
+                        <i class="meeting-dot blue-dot"></i>
+
+                        <div class="meeting-info">
+                            <strong>Sunil Sharma</strong>
+                            <span>Soil & fertilizer advice</span>
+                        </div>
+
+                        <button>Join</button>
+
+                    </div>
+
+
+                    <div class="meeting">
+
+                        <div class="meeting-time">
+                            <strong>03:30</strong>
+                            <span>PM</span>
+                        </div>
+
+                        <i class="meeting-dot orange-dot"></i>
+
+                        <div class="meeting-info">
+                            <strong>Priya Devi</strong>
+                            <span>Irrigation consultation</span>
+                        </div>
+
+                        <button>Join</button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel alerts-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Priority Alerts</h3>
+                            <p>Issues requiring immediate attention</p>
+                        </div>
+
+                        <span class="alert-count">4 Alerts</span>
+
+                    </div>
+
+
+                    <div class="alert-row red-alert">
+                        <div class="alert-icon">⚠</div>
+
+                        <div>
+                            <strong>Pest Risk Detected</strong>
+                            <p>High pest activity reported in Farm C.</p>
+                        </div>
+
+                        <b>→</b>
+                    </div>
+
+
+                    <div class="alert-row yellow-alert">
+                        <div class="alert-icon">💧</div>
+
+                        <div>
+                            <strong>Low Soil Moisture</strong>
+                            <p>Farm B moisture level below 35%.</p>
+                        </div>
+
+                        <b>→</b>
+                    </div>
+
+
+                    <div class="alert-row blue-alert">
+                        <div class="alert-icon">🌡️</div>
+
+                        <div>
+                            <strong>Temperature Rise</strong>
+                            <p>Temperature expected to reach 34°C tomorrow.</p>
+                        </div>
+
+                        <b>→</b>
+                    </div>
+
+
+                    <div class="alert-row green-alert">
+                        <div class="alert-icon">🌱</div>
+
+                        <div>
+                            <strong>Crop Stress</strong>
+                            <p>Vegetation stress detected in Farm D.</p>
+                        </div>
+
+                        <b>→</b>
+                    </div>
+
+                </div>
+
+
+                <div class="panel quick-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Common expert activities</p>
+                        </div>
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a href="#">
+                            <span>👨‍🌾</span>
+                            <strong>View Farmers</strong>
+                            <small>Manage farmer profiles</small>
+                        </a>
+
+                        <a href="#">
+                            <span>📋</span>
+                            <strong>New Consultation</strong>
+                            <small>Schedule a meeting</small>
+                        </a>
+
+                        <a href="#">
+                            <span>🌾</span>
+                            <strong>Crop Analysis</strong>
+                            <small>Analyze crop health</small>
+                        </a>
+
+                        <a href="#">
+                            <span>📊</span>
+                            <strong>Generate Report</strong>
+                            <small>Create farm report</small>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="smart-insight">
+
+                <div class="insight-icon">💡</div>
+
+                <div class="insight-content">
+
+                    <span>SMART AGRICULTURE INSIGHT</span>
+
+                    <strong>Monitor soil moisture regularly</strong>
+
+                    <p>
+                        Fields with moisture levels below 35% may require
+                        irrigation to maintain healthy crop growth.
+                    </p>
+
+                </div>
+
+                <a href="#">View Details →</a>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <span>© 2026 Digital Agriculture Platform</span>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Help & Support</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

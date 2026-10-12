@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Digital Agriculture Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html" class="active">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="admin-main">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content settings-page">
+
+            <div class="settings-heading">
+
+                <div>
+                    <span>ADMINISTRATION</span>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your account and platform preferences.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="settings-layout">
+
+
+                <!-- SETTINGS MENU -->
+                <aside class="settings-menu">
+
+                    <a href="#general" class="settings-menu-item active">
+                        <span>⚙</span>
+                        <div>
+                            <strong>General</strong>
+                            <small>Platform settings</small>
+                        </div>
+                    </a>
+
+                    <a href="#account" class="settings-menu-item">
+                        <span>♙</span>
+                        <div>
+                            <strong>Admin Account</strong>
+                            <small>Profile information</small>
+                        </div>
+                    </a>
+
+                    <a href="#security" class="settings-menu-item">
+                        <span>◆</span>
+                        <div>
+                            <strong>Security</strong>
+                            <small>Password and login</small>
+                        </div>
+                    </a>
+
+                    <a href="#notifications" class="settings-menu-item">
+                        <span>♢</span>
+                        <div>
+                            <strong>Notifications</strong>
+                            <small>Alert preferences</small>
+                        </div>
+                    </a>
+
+                </aside>
+
+
+                <!-- SETTINGS CONTENT -->
+                <div class="settings-content">
+
+
+                    <!-- GENERAL -->
+                    <section class="settings-card" id="general">
+
+                        <div class="settings-card-heading">
+
+                            <div class="settings-card-icon green-setting">
+                                ⚙
+                            </div>
+
+                            <div>
+                                <h2>General Settings</h2>
+                                <p>Basic information about your platform.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-form">
+
+                            <div class="setting-field">
+
+                                <label>Platform Name</label>
+
+                                <input
+                                    type="text"
+                                    value="Digital Agriculture"
+                                >
+
+                            </div>
+
+
+                            <div class="setting-field">
+
+                                <label>Admin Email</label>
+
+                                <input
+                                    type="email"
+                                    value="admin@digitalagriculture.com"
+                                >
+
+                            </div>
+
+
+                            <div class="setting-field">
+
+                                <label>Default Language</label>
+
+                                <select>
+                                    <option>English</option>
+                                    <option>Hindi</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="setting-field">
+
+                                <label>Time Zone</label>
+
+                                <select>
+                                    <option>India Standard Time (IST)</option>
+                                    <option>UTC</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-save">
+                            <button>Save Changes</button>
+                        </div>
+
+                    </section>
+
+
+                    <!-- ACCOUNT -->
+                    <section class="settings-card" id="account">
+
+                        <div class="settings-card-heading">
+
+                            <div class="settings-card-icon blue-setting">
+                                ♙
+                            </div>
+
+                            <div>
+                                <h2>Admin Account</h2>
+                                <p>Manage administrator profile details.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-profile-box">
+
+                            <div class="settings-avatar">
+                                A
+                            </div>
+
+                            <div>
+                                <strong>Administrator</strong>
+                                <span>Super Administrator</span>
+                            </div>
+
+                            <button class="edit-profile">
+                                Edit Profile
+                            </button>
+
+                        </div>
+
+
+                        <div class="settings-form">
+
+                            <div class="setting-field">
+
+                                <label>Full Name</label>
+
+                                <input
+                                    type="text"
+                                    value="Administrator"
+                                >
+
+                            </div>
+
+
+                            <div class="setting-field">
+
+                                <label>Email Address</label>
+
+                                <input
+                                    type="email"
+                                    value="admin@digitalagriculture.com"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- SECURITY -->
+                    <section class="settings-card" id="security">
+
+                        <div class="settings-card-heading">
+
+                            <div class="settings-card-icon orange-setting">
+                                ◆
+                            </div>
+
+                            <div>
+                                <h2>Security</h2>
+                                <p>Manage account security preferences.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="security-row">
+
+                            <div>
+                                <strong>Password</strong>
+                                <span>Last changed 30 days ago</span>
+                            </div>
+
+                            <a href="change-password.html">
+                                Change Password
+                            </a>
+
+                        </div>
+
+
+                        <div class="security-row">
+
+                            <div>
+                                <strong>Two-Factor Authentication</strong>
+                                <span>Add an extra layer of account security.</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span></span>
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- NOTIFICATIONS -->
+                    <section class="settings-card" id="notifications">
+
+                        <div class="settings-card-heading">
+
+                            <div class="settings-card-icon purple-setting">
+                                ♢
+                            </div>
+
+                            <div>
+                                <h2>Notifications</h2>
+                                <p>Choose which alerts you want to receive.</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="notification-setting">
+
+                            <div>
+                                <strong>New Farmer Registration</strong>
+                                <span>Get notified when a new farmer joins.</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="notification-setting">
+
+                            <div>
+                                <strong>New Feedback</strong>
+                                <span>Receive alerts for new user feedback.</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox" checked>
+                                <span></span>
+                            </label>
+
+                        </div>
+
+
+                        <div class="notification-setting">
+
+                            <div>
+                                <strong>Market Price Updates</strong>
+                                <span>Receive alerts when market prices change.</span>
+                            </div>
+
+                            <label class="toggle">
+                                <input type="checkbox">
+                                <span></span>
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

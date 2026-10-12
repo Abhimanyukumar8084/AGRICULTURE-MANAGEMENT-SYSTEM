@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farmers | Digital Agriculture Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html" class="active">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content farmers-page">
+
+
+            <!-- ================= PAGE HEADING ================= -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Farmers</h1>
+                    <p>Manage all registered farmers on the platform.</p>
+                </div>
+
+                <!-- ADD FARMER BUTTON -->
+
+                <a href="add-farmer.html" class="add-farmer-btn">
+                    + Add Farmer
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= FARMER SUMMARY ================= -->
+
+            <div class="farmer-summary">
+
+                <div class="summary-box">
+
+                    <span class="summary-icon">♙</span>
+
+                    <div>
+                        <strong>1,248</strong>
+                        <small>Total Farmers</small>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <span class="summary-icon active-summary">●</span>
+
+                    <div>
+                        <strong>1,185</strong>
+                        <small>Active Farmers</small>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <span class="summary-icon pending-summary">◷</span>
+
+                    <div>
+                        <strong>42</strong>
+                        <small>Pending</small>
+                    </div>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <span class="summary-icon inactive-summary">○</span>
+
+                    <div>
+                        <strong>21</strong>
+                        <small>Inactive</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= FARMERS TABLE PANEL ================= -->
+
+            <section class="panel farmers-management">
+
+
+                <!-- TABLE TOOLBAR -->
+
+                <div class="farmers-toolbar">
+
+                    <div>
+
+                        <h2>Registered Farmers</h2>
+
+                        <p>
+                            List of farmers registered on Digital Agriculture.
+                        </p>
+
+                    </div>
+
+
+                    <div class="farmer-tools">
+
+                        <div class="farmer-search">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                placeholder="Search farmer..."
+                            >
+
+                        </div>
+
+
+                        <select>
+
+                            <option>All Status</option>
+                            <option>Active</option>
+                            <option>Pending</option>
+                            <option>Inactive</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TABLE ================= -->
+
+                <div class="farmers-table-wrapper">
+
+                    <table class="farmers-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Farmer</th>
+                                <th>Mobile</th>
+                                <th>Location</th>
+                                <th>Main Crop</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- FARMER 1 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            AS
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Amit Singh</strong>
+
+                                            <span>
+                                                amit.singh@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>9876543210</td>
+                                <td>Jaipur</td>
+                                <td>Wheat</td>
+                                <td>08 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status active-status">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- FARMER 2 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            SK
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Suresh Kumar</strong>
+
+                                            <span>
+                                                suresh.kumar@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>8765432109</td>
+                                <td>Ajmer</td>
+                                <td>Rice</td>
+                                <td>07 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status active-status">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- FARMER 3 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            NS
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Neha Sharma</strong>
+
+                                            <span>
+                                                neha.sharma@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>7654321098</td>
+                                <td>Kota</td>
+                                <td>Maize</td>
+                                <td>06 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status pending-status">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- FARMER 4 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            RP
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Ravi Patel</strong>
+
+                                            <span>
+                                                ravi.patel@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>6543210987</td>
+                                <td>Alwar</td>
+                                <td>Mustard</td>
+                                <td>05 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status active-status">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- FARMER 5 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            VM
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Vijay Meena</strong>
+
+                                            <span>
+                                                vijay.meena@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>9432109876</td>
+                                <td>Bharatpur</td>
+                                <td>Cotton</td>
+                                <td>04 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status active-status">
+                                        Active
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- FARMER 6 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="farmer-person">
+
+                                        <div class="farmer-avatar">
+                                            MK
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Manoj Kumar</strong>
+
+                                            <span>
+                                                manoj.kumar@gmail.com
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>9321098765</td>
+                                <td>Jodhpur</td>
+                                <td>Bajra</td>
+                                <td>03 Oct 2026</td>
+
+                                <td>
+                                    <span class="farmer-status inactive-status">
+                                        Inactive
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- ================= PAGINATION ================= -->
+
+                <div class="farmers-pagination">
+
+                    <span>
+                        Showing 1–6 of 1,248 farmers
+                    </span>
+
+
+                    <div>
+
+                        <button class="page-btn active-page">
+                            1
+                        </button>
+
+                        <button class="page-btn">
+                            2
+                        </button>
+
+                        <button class="page-btn">
+                            3
+                        </button>
+
+                        <button class="page-btn">
+                            ...
+                        </button>
+
+                        <button class="page-btn">
+                            125
+                        </button>
+
+                        <button class="next-btn">
+                            Next →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+        <!-- END ADMIN CONTENT -->
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+    <!-- END ADMIN MAIN -->
+
+
+</div>
+<!-- END ADMIN LAYOUT -->
+
+
+</body>
+</html>
