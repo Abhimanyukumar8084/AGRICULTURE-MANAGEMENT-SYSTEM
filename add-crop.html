@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Crop | Digital Agriculture Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html" class="active">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+
+           <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content add-crop-page">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Add Crop</h1>
+                    <p>Add a new crop to the Digital Agriculture platform.</p>
+                </div>
+
+                <a href="admin-crops.html" class="back-crop-btn">
+                    ← Back to Crops
+                </a>
+
+            </div>
+
+
+
+            <!-- ================= FORM PANEL ================= -->
+
+            <section class="panel add-crop-panel">
+
+
+                <div class="add-crop-intro">
+
+                    <div class="add-crop-icon">
+                        🌱
+                    </div>
+
+                    <div>
+                        <h2>Crop Information</h2>
+                        <p>
+                            Enter the details of the crop you want to add.
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <form class="crop-form">
+
+
+                    <!-- BASIC INFORMATION -->
+
+                    <div class="crop-form-section">
+
+                        <div class="crop-section-title">
+
+                            <span>01</span>
+
+                            <div>
+                                <strong>Basic Information</strong>
+                                <small>General crop details</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="crop-form-grid">
+
+
+                            <div class="crop-form-group">
+
+                                <label>
+                                    Crop Name
+                                    <b>*</b>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter crop name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>
+                                    Crop Type
+                                    <b>*</b>
+                                </label>
+
+                                <select required>
+
+                                    <option>Select Crop Type</option>
+                                    <option>Cereal</option>
+                                    <option>Pulses</option>
+                                    <option>Oilseed</option>
+                                    <option>Vegetable</option>
+                                    <option>Fruit</option>
+                                    <option>Cash Crop</option>
+                                    <option>Other</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>
+                                    Season
+                                    <b>*</b>
+                                </label>
+
+                                <select required>
+
+                                    <option>Select Season</option>
+                                    <option>Kharif</option>
+                                    <option>Rabi</option>
+                                    <option>Zaid</option>
+                                    <option>Year Round</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Crop Variety</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Enter crop variety"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FARMING DETAILS -->
+
+                    <div class="crop-form-section">
+
+                        <div class="crop-section-title">
+
+                            <span>02</span>
+
+                            <div>
+                                <strong>Farming Details</strong>
+                                <small>Crop growing information</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="crop-form-grid">
+
+
+                            <div class="crop-form-group">
+
+                                <label>Growing Duration</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Example: 120 days"
+                                >
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Water Requirement</label>
+
+                                <select>
+
+                                    <option>Select Requirement</option>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Soil Type</label>
+
+                                <select>
+
+                                    <option>Select Soil Type</option>
+                                    <option>Loamy Soil</option>
+                                    <option>Clay Soil</option>
+                                    <option>Sandy Soil</option>
+                                    <option>Black Soil</option>
+                                    <option>Red Soil</option>
+                                    <option>Alluvial Soil</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Temperature Range</label>
+
+                                <input
+                                    type="text"
+                                    placeholder="Example: 20°C - 30°C"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CROP DESCRIPTION -->
+
+                    <div class="crop-form-section">
+
+                        <div class="crop-section-title">
+
+                            <span>03</span>
+
+                            <div>
+                                <strong>Crop Description</strong>
+                                <small>Additional crop information</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="crop-form-group full-width">
+
+                            <label>Description</label>
+
+                            <textarea
+                                rows="5"
+                                placeholder="Write a short description about this crop..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MARKET INFORMATION -->
+
+                    <div class="crop-form-section">
+
+                        <div class="crop-section-title">
+
+                            <span>04</span>
+
+                            <div>
+                                <strong>Market Information</strong>
+                                <small>Basic market details</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="crop-form-grid">
+
+
+                            <div class="crop-form-group">
+
+                                <label>Average Market Price</label>
+
+                                <input
+                                    type="number"
+                                    placeholder="Enter price"
+                                >
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Price Unit</label>
+
+                                <select>
+
+                                    <option>₹ / Quintal</option>
+                                    <option>₹ / Kg</option>
+                                    <option>₹ / Ton</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>MSP</label>
+
+                                <input
+                                    type="number"
+                                    placeholder="Enter MSP"
+                                >
+
+                            </div>
+
+
+                            <div class="crop-form-group">
+
+                                <label>Status</label>
+
+                                <select>
+
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTION BUTTONS -->
+
+                    <div class="crop-form-actions">
+
+                        <a
+                            href="admin-crops.html"
+                            class="cancel-crop-btn"
+                        >
+                            Cancel
+                        </a>
+
+                        <button
+                            type="reset"
+                            class="reset-crop-btn"
+                        >
+                            Reset
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="save-crop-btn"
+                        >
+                            ✓ Add Crop
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+        </div>
+        <!-- END ADMIN CONTENT -->
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+    <!-- END ADMIN MAIN -->
+
+
+</div>
+<!-- END ADMIN LAYOUT -->
+
+
+</body>
+</html>

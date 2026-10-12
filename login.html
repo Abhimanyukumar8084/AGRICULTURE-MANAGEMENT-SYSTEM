@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Digital Agriculture</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <!-- LEFT VISUAL -->
+    <div class="login-side login-side-left">
+
+        <div class="side-circle circle-one"></div>
+        <div class="side-circle circle-two"></div>
+
+        <div class="side-content">
+
+            <div class="side-brand">
+                <span>🌿</span>
+                <b>Digital Agriculture</b>
+            </div>
+
+            <div class="side-main">
+                <span class="small-label">SMART FARMING PLATFORM</span>
+
+                <h1>
+                    Grow Better.<br>
+                    Farm Smarter.
+                </h1>
+
+                <p>
+                    Smart technology, useful information and
+                    expert guidance — everything farmers need
+                    in one place.
+                </p>
+            </div>
+
+            <div class="side-points">
+
+                <div class="side-point">
+                    <span>🌱</span>
+                    <div>
+                        <b>Smart Farming</b>
+                        <small>Manage your crops easily</small>
+                    </div>
+                </div>
+
+                <div class="side-point">
+                    <span>☁️</span>
+                    <div>
+                        <b>Weather Updates</b>
+                        <small>Stay prepared with forecasts</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LOGIN CARD -->
+
+    <div class="login-center">
+
+        <div class="login-card">
+
+            <div class="login-heading">
+
+                <div class="login-icon" id="loginIcon">
+                    🔐
+                </div>
+
+                <h1 id="loginTitle">
+                    Welcome Back
+                </h1>
+
+                <p id="loginSubtitle">
+                    Login to continue to Digital Agriculture
+                </p>
+
+            </div>
+
+
+            <!-- LOGIN TYPE -->
+
+            <div class="login-type">
+
+                <button
+                    type="button"
+                    class="login-type-btn active"
+                    id="userBtn"
+                    onclick="setLoginType('user')">
+                    👤 User
+                </button>
+
+                <button
+                    type="button"
+                    class="login-type-btn"
+                    id="expertBtn"
+                    onclick="setLoginType('expert')">
+                    🧑‍🌾 Expert
+                </button>
+
+                <button
+                    type="button"
+                    class="login-type-btn"
+                    id="adminBtn"
+                    onclick="setLoginType('admin')">
+                    🛡️ Admin
+                </button>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form id="loginForm" action="dashboard.html">
+
+                <div class="login-form-group">
+
+                    <label>Email Address</label>
+
+                    <div class="login-input">
+
+                        <span>✉</span>
+
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-form-group">
+
+                    <label>Password</label>
+
+                    <div class="login-input">
+
+                        <span>🔒</span>
+
+                        <input
+                            type="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <span class="password-eye">
+                            👁
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p class="register-link" id="registerText">
+
+                Don't have an account?
+
+                <a href="register.html">
+                    Register here
+                </a>
+
+            </p>
+
+
+            <div class="login-divider">
+                <span>OR</span>
+            </div>
+
+
+            <a href="index.html" class="home-link">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT VISUAL -->
+
+    <div class="login-side login-side-right">
+
+        <div class="right-decoration">
+
+            <div class="crop-icon crop-one">🌾</div>
+            <div class="crop-icon crop-two">🌱</div>
+            <div class="crop-icon crop-three">🍃</div>
+
+        </div>
+
+        <div class="right-info">
+
+            <span>AGRICULTURE • TECHNOLOGY</span>
+
+            <h2>
+                Technology<br>
+                meets farming.
+            </h2>
+
+            <p>
+                Make informed decisions with
+                better agricultural insights.
+            </p>
+
+            <div class="right-stat">
+                <strong>01</strong>
+                <span>Smart agricultural ecosystem</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function setLoginType(type) {
+
+    const userBtn = document.getElementById("userBtn");
+    const expertBtn = document.getElementById("expertBtn");
+    const adminBtn = document.getElementById("adminBtn");
+
+    const title = document.getElementById("loginTitle");
+    const subtitle = document.getElementById("loginSubtitle");
+    const icon = document.getElementById("loginIcon");
+
+    const form = document.getElementById("loginForm");
+    const button = document.getElementById("loginButton");
+    const registerText = document.getElementById("registerText");
+
+
+    userBtn.classList.remove("active");
+    expertBtn.classList.remove("active");
+    adminBtn.classList.remove("active");
+
+
+    if (type === "user") {
+
+        userBtn.classList.add("active");
+
+        title.innerText = "Welcome Back";
+        subtitle.innerText =
+            "Login to continue to Digital Agriculture";
+
+        icon.innerText = "🔐";
+
+        button.innerText = "Login";
+
+        form.action = "dashboard.html";
+
+        registerText.style.display = "block";
+    }
+
+
+    else if (type === "expert") {
+
+        expertBtn.classList.add("active");
+
+        title.innerText = "Expert Login";
+        subtitle.innerText =
+            "Access your expert dashboard";
+
+        icon.innerText = "🧑‍🌾";
+
+        button.innerText = "Login as Expert";
+
+        form.action = "expert-dashboard.html";
+
+        registerText.style.display = "none";
+    }
+
+
+    else {
+
+        adminBtn.classList.add("active");
+
+        title.innerText = "Admin Login";
+        subtitle.innerText =
+            "Access the administration panel";
+
+        icon.innerText = "🛡️";
+
+        button.innerText = "Login as Admin";
+
+        form.action = "admin-dashboard.html";
+
+        registerText.style.display = "none";
+    }
+
+}
+
+</script>
+
+</body>
+</html>

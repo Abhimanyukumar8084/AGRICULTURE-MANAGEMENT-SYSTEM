@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users | Digital Agriculture Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="brand-logo">🌿</div>
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html" class="active">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="admin-settings.html">
+                <span>⚙</span>Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>Logout
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="admin-main">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content users-page">
+
+
+            <!-- USER HERO -->
+            <section class="users-hero">
+
+                <div class="users-hero-content">
+
+                    <div class="users-hero-icon">
+                        ♟
+                    </div>
+
+                    <div>
+                        <span class="hero-label">USER MANAGEMENT</span>
+                        <h1>People using your platform</h1>
+                        <p>
+                            Manage farmers, experts and administrators
+                            from one central place.
+                        </p>
+                    </div>
+
+                </div>
+
+                <button class="create-user-btn">
+                    + Create User
+                </button>
+
+            </section>
+
+
+            <!-- USER OVERVIEW -->
+            <div class="user-overview">
+
+                <div class="overview-main">
+
+                    <div class="overview-number">
+                        <span>Total Platform Users</span>
+                        <strong>1,486</strong>
+                    </div>
+
+                    <div class="overview-growth">
+                        <b>↑ 12.8%</b>
+                        <span>from last month</span>
+                    </div>
+
+                </div>
+
+
+                <div class="overview-item">
+                    <span class="overview-dot green-dot"></span>
+                    <div>
+                        <strong>1,248</strong>
+                        <small>Farmers</small>
+                    </div>
+                </div>
+
+
+                <div class="overview-item">
+                    <span class="overview-dot blue-dot"></span>
+                    <div>
+                        <strong>186</strong>
+                        <small>Experts</small>
+                    </div>
+                </div>
+
+
+                <div class="overview-item">
+                    <span class="overview-dot purple-dot"></span>
+                    <div>
+                        <strong>52</strong>
+                        <small>Admins</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- USER SEGMENTS -->
+            <div class="user-sections">
+
+
+                <!-- LEFT -->
+                <section class="user-segment-panel">
+
+                    <div class="section-title">
+
+                        <div>
+                            <span>USER SEGMENTS</span>
+                            <h2>Who is using the platform?</h2>
+                        </div>
+
+                        <button class="more-btn">•••</button>
+
+                    </div>
+
+
+                    <div class="segment-list">
+
+                        <div class="segment active-segment">
+
+                            <div class="segment-avatar farmer-segment">
+                                ♙
+                            </div>
+
+                            <div class="segment-info">
+                                <strong>Farmers</strong>
+                                <span>Registered agricultural users</span>
+                            </div>
+
+                            <div class="segment-count">
+                                <b>1,248</b>
+                                <small>84%</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="segment">
+
+                            <div class="segment-avatar expert-segment">
+                                ✦
+                            </div>
+
+                            <div class="segment-info">
+                                <strong>Agriculture Experts</strong>
+                                <span>Experts answering queries</span>
+                            </div>
+
+                            <div class="segment-count">
+                                <b>186</b>
+                                <small>12.5%</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="segment">
+
+                            <div class="segment-avatar admin-segment">
+                                ♟
+                            </div>
+
+                            <div class="segment-info">
+                                <strong>Administrators</strong>
+                                <span>Platform management accounts</span>
+                            </div>
+
+                            <div class="segment-count">
+                                <b>52</b>
+                                <small>3.5%</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RIGHT -->
+                <section class="activity-panel">
+
+                    <div class="section-title">
+
+                        <div>
+                            <span>ACTIVITY</span>
+                            <h2>User activity</h2>
+                        </div>
+
+                        <span class="live-status">
+                            <i></i> Live
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-number">
+                        <strong>327</strong>
+                        <span>active users today</span>
+                    </div>
+
+
+                    <div class="activity-track">
+
+                        <span style="height:35%"></span>
+                        <span style="height:55%"></span>
+                        <span style="height:45%"></span>
+                        <span style="height:72%"></span>
+                        <span style="height:62%"></span>
+                        <span style="height:88%"></span>
+                        <span style="height:76%"></span>
+                        <span style="height:95%"></span>
+                        <span style="height:68%"></span>
+                        <span style="height:82%"></span>
+                        <span style="height:58%"></span>
+                        <span style="height:73%"></span>
+
+                    </div>
+
+                    <div class="activity-times">
+                        <span>8 AM</span>
+                        <span>12 PM</span>
+                        <span>4 PM</span>
+                        <span>8 PM</span>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- RECENT USERS -->
+            <section class="recent-users-panel">
+
+                <div class="recent-users-heading">
+
+                    <div>
+                        <span>RECENTLY JOINED</span>
+                        <h2>New users</h2>
+                    </div>
+
+                    <div class="user-actions">
+
+                        <div class="user-search">
+                            ⌕
+                            <input
+                                type="text"
+                                placeholder="Search users..."
+                            >
+                        </div>
+
+                        <button class="filter-user">
+                            Filter ▾
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="user-cards">
+
+
+                    <div class="user-card">
+
+                        <div class="card-top">
+
+                            <div class="large-avatar avatar-green">
+                                AS
+                            </div>
+
+                            <span class="online-user"></span>
+
+                        </div>
+
+                        <strong>Amit Singh</strong>
+
+                        <span class="user-role">
+                            Farmer
+                        </span>
+
+                        <div class="user-card-bottom">
+                            <span>Jaipur, Rajasthan</span>
+                            <b>Today</b>
+                        </div>
+
+                    </div>
+
+
+                    <div class="user-card">
+
+                        <div class="card-top">
+
+                            <div class="large-avatar avatar-blue">
+                                NS
+                            </div>
+
+                            <span class="online-user"></span>
+
+                        </div>
+
+                        <strong>Neha Sharma</strong>
+
+                        <span class="user-role">
+                            Agriculture Expert
+                        </span>
+
+                        <div class="user-card-bottom">
+                            <span>Ajmer, Rajasthan</span>
+                            <b>Today</b>
+                        </div>
+
+                    </div>
+
+
+                    <div class="user-card">
+
+                        <div class="card-top">
+
+                            <div class="large-avatar avatar-orange">
+                                RK
+                            </div>
+
+                            <span class="offline-user"></span>
+
+                        </div>
+
+                        <strong>Ravi Kumar</strong>
+
+                        <span class="user-role">
+                            Farmer
+                        </span>
+
+                        <div class="user-card-bottom">
+                            <span>Kota, Rajasthan</span>
+                            <b>Yesterday</b>
+                        </div>
+
+                    </div>
+
+
+                    <div class="user-card">
+
+                        <div class="card-top">
+
+                            <div class="large-avatar avatar-purple">
+                                SK
+                            </div>
+
+                            <span class="online-user"></span>
+
+                        </div>
+
+                        <strong>Suresh Kumar</strong>
+
+                        <span class="user-role">
+                            Farmer
+                        </span>
+
+                        <div class="user-card-bottom">
+                            <span>Bharatpur, Rajasthan</span>
+                            <b>Yesterday</b>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- USER DIRECTORY -->
+            <section class="user-directory">
+
+                <div class="directory-heading">
+
+                    <div>
+                        <span>DIRECTORY</span>
+                        <h2>All platform users</h2>
+                    </div>
+
+                    <button class="export-users">
+                        ↓ Export Users
+                    </button>
+
+                </div>
+
+
+                <div class="directory-list">
+
+                    <div class="directory-row">
+
+                        <div class="directory-user">
+                            <div class="mini-avatar">AS</div>
+
+                            <div>
+                                <strong>Amit Singh</strong>
+                                <span>amit@example.com</span>
+                            </div>
+                        </div>
+
+                        <span class="role-pill farmer-pill">Farmer</span>
+
+                        <span class="joined-date">08 Oct 2026</span>
+
+                        <span class="active-pill">Active</span>
+
+                        <button class="user-menu">•••</button>
+
+                    </div>
+
+
+                    <div class="directory-row">
+
+                        <div class="directory-user">
+                            <div class="mini-avatar blue-mini">NS</div>
+
+                            <div>
+                                <strong>Neha Sharma</strong>
+                                <span>neha@example.com</span>
+                            </div>
+                        </div>
+
+                        <span class="role-pill expert-pill">Expert</span>
+
+                        <span class="joined-date">08 Oct 2026</span>
+
+                        <span class="active-pill">Active</span>
+
+                        <button class="user-menu">•••</button>
+
+                    </div>
+
+
+                    <div class="directory-row">
+
+                        <div class="directory-user">
+                            <div class="mini-avatar orange-mini">RK</div>
+
+                            <div>
+                                <strong>Ravi Kumar</strong>
+                                <span>ravi@example.com</span>
+                            </div>
+                        </div>
+
+                        <span class="role-pill farmer-pill">Farmer</span>
+
+                        <span class="joined-date">07 Oct 2026</span>
+
+                        <span class="active-pill">Active</span>
+
+                        <button class="user-menu">•••</button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crops | Digital Agriculture Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+
+<body>
+
+
+<div class="admin-layout">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+
+                <strong>Digital Agriculture</strong>
+
+                <span>Admin Panel</span>
+
+            </div>
+
+        </div>
+
+
+
+        <nav class="admin-menu">
+
+
+            <a href="admin-dashboard.html">
+
+                <span class="menu-icon">⌂</span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="admin-farmers.html">
+
+                <span class="menu-icon">♙</span>
+
+                <span>Farmers</span>
+
+            </a>
+
+
+            <a href="admin-crops.html" class="active">
+
+                <span class="menu-icon">🌱</span>
+
+                <span>Crops</span>
+
+            </a>
+
+
+            <a href="admin-market.html">
+
+                <span class="menu-icon">₹</span>
+
+                <span>Market Prices</span>
+
+            </a>
+
+
+            <a href="admin-reports.html">
+
+                <span class="menu-icon">▣</span>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <a href="admin-users.html">
+
+                <span class="menu-icon">♟</span>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <a href="admin-feedback.html">
+
+                <span class="menu-icon">☷</span>
+
+                <span>Feedback</span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-footer">
+
+
+            <a href="admin-settings.html">
+
+                <span>⚙</span>
+
+                Settings
+
+            </a>
+
+
+            <a href="login.html">
+
+                <span>↪</span>
+
+                Logout
+
+            </a>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-header">
+
+
+            <div class="header-left">
+
+                <button class="sidebar-toggle">
+                    ☰
+                </button>
+
+            </div>
+
+
+
+           <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content crops-page">
+
+
+            <!-- ================= HEADING ================= -->
+
+            <div class="page-heading">
+
+
+                <div>
+
+                    <h1>Crops</h1>
+
+                    <p>
+                        Manage crops and agricultural information.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ADD CROP REDIRECT -->
+
+                <a
+                    href="add-crop.html"
+                    class="add-crop-btn"
+                >
+                    + Add Crop
+                </a>
+
+
+            </div>
+
+
+
+            <!-- ================= SUMMARY ================= -->
+
+            <div class="crop-summary">
+
+
+                <div class="crop-summary-box">
+
+                    <div class="crop-summary-icon green">
+                        🌱
+                    </div>
+
+                    <div>
+
+                        <strong>340</strong>
+
+                        <span>Total Crops</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="crop-summary-box">
+
+                    <div class="crop-summary-icon yellow">
+                        ☀
+                    </div>
+
+                    <div>
+
+                        <strong>18</strong>
+
+                        <span>Crop Types</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="crop-summary-box">
+
+                    <div class="crop-summary-icon blue">
+                        ♨
+                    </div>
+
+                    <div>
+
+                        <strong>12</strong>
+
+                        <span>Seasonal Crops</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="crop-summary-box">
+
+                    <div class="crop-summary-icon purple">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>16</strong>
+
+                        <span>Active Crops</span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= CROP MANAGEMENT ================= -->
+
+            <section class="panel crop-management">
+
+
+                <div class="crop-toolbar">
+
+
+                    <div>
+
+                        <h2>Crop List</h2>
+
+                        <p>
+                            View and manage crops available on the platform.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="crop-tools">
+
+
+                        <div class="crop-search">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                placeholder="Search crop..."
+                            >
+
+                        </div>
+
+
+                        <select>
+
+                            <option>All Seasons</option>
+
+                            <option>Kharif</option>
+
+                            <option>Rabi</option>
+
+                            <option>Zaid</option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= CROP TABLE ================= -->
+
+                <div class="crop-table-wrapper">
+
+
+                    <table class="crop-table">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Crop</th>
+
+                                <th>Season</th>
+
+                                <th>Farmers</th>
+
+                                <th>Area</th>
+
+                                <th>Avg. Price</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+
+                        <tbody>
+
+
+                            <!-- ================= WHEAT ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image wheat-image">
+                                            🌾
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Wheat</strong>
+
+                                            <span>
+                                                Triticum aestivum
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season rabi">
+                                        Rabi
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    425
+                                </td>
+
+
+                                <td>
+                                    620 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹2,450 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= RICE ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image rice-image">
+                                            🌾
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Rice</strong>
+
+                                            <span>
+                                                Oryza sativa
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season kharif">
+                                        Kharif
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    318
+                                </td>
+
+
+                                <td>
+                                    480 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹2,180 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= MAIZE ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image maize-image">
+                                            🌽
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Maize</strong>
+
+                                            <span>
+                                                Zea mays
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season kharif">
+                                        Kharif
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    265
+                                </td>
+
+
+                                <td>
+                                    350 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹2,100 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= MUSTARD ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image mustard-image">
+                                            🌼
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Mustard</strong>
+
+                                            <span>
+                                                Brassica juncea
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season rabi">
+                                        Rabi
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    210
+                                </td>
+
+
+                                <td>
+                                    290 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹5,450 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= COTTON ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image cotton-image">
+                                            ☁
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Cotton</strong>
+
+                                            <span>
+                                                Gossypium
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season kharif">
+                                        Kharif
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    165
+                                </td>
+
+
+                                <td>
+                                    240 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹7,100 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-active">
+                                        Active
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- ================= BAJRA ================= -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="crop-person">
+
+                                        <div class="crop-image bajra-image">
+                                            🌾
+                                        </div>
+
+                                        <div>
+
+                                            <strong>Bajra</strong>
+
+                                            <span>
+                                                Pennisetum glaucum
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="season kharif">
+                                        Kharif
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+                                    142
+                                </td>
+
+
+                                <td>
+                                    180 Acres
+                                </td>
+
+
+                                <td>
+                                    ₹2,300 / q
+                                </td>
+
+
+                                <td>
+
+                                    <span class="crop-status crop-inactive">
+                                        Inactive
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="crop-view">
+                                        View
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+
+                <!-- ================= PAGINATION ================= -->
+
+                <div class="crop-pagination">
+
+
+                    <span>
+                        Showing 1–6 of 18 crop types
+                    </span>
+
+
+
+                    <div>
+
+                        <button class="crop-page active">
+                            1
+                        </button>
+
+                        <button class="crop-page">
+                            2
+                        </button>
+
+                        <button class="crop-page">
+                            3
+                        </button>
+
+                        <button class="crop-next">
+                            Next →
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+        <!-- END ADMIN CONTENT -->
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Help
+                </a>
+
+            </div>
+
+
+        </footer>
+
+
+    </main>
+    <!-- END ADMIN MAIN -->
+
+
+</div>
+<!-- END ADMIN LAYOUT -->
+
+
+</body>
+
+</html>

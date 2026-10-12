@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Digital Agriculture Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="brand-logo">🌿</div>
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+        </div>
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html" class="active">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="admin-settings.html">
+                <span>⚙</span>Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>Logout
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="admin-main">
+
+        <!-- HEADER -->
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+            <a href="admin-profile.html" class="admin-account">
+
+    <div class="notification">
+        ♢
+        <span></span>
+    </div>
+
+    <div class="account-divider"></div>
+
+    <div class="account-avatar">
+        A
+    </div>
+
+    <div class="account-details">
+        <strong>Administrator</strong>
+        <small>Administrator</small>
+    </div>
+
+    <div class="account-arrow">
+        ▾
+    </div>
+
+</a>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="admin-content reports-page">
+
+            <!-- HEADING -->
+            <div class="page-heading">
+
+                <div>
+                    <h1>Reports</h1>
+                    <p>Generate and manage agriculture platform reports.</p>
+                </div>
+
+                <div class="report-date">
+                    <span>Last Updated</span>
+                    <strong>08 Oct 2026</strong>
+                </div>
+
+            </div>
+
+
+            <!-- REPORT STATISTICS -->
+            <div class="report-stats">
+
+                <div class="report-stat-card">
+                    <div class="report-stat-icon green-stat">▣</div>
+                    <div>
+                        <span>Total Reports</span>
+                        <strong>86</strong>
+                        <small>All generated reports</small>
+                    </div>
+                </div>
+
+                <div class="report-stat-card">
+                    <div class="report-stat-icon blue-stat">↓</div>
+                    <div>
+                        <span>Downloaded</span>
+                        <strong>64</strong>
+                        <small>This month</small>
+                    </div>
+                </div>
+
+                <div class="report-stat-card">
+                    <div class="report-stat-icon orange-stat">◷</div>
+                    <div>
+                        <span>Pending</span>
+                        <strong>05</strong>
+                        <small>Reports processing</small>
+                    </div>
+                </div>
+
+                <div class="report-stat-card">
+                    <div class="report-stat-icon purple-stat">▤</div>
+                    <div>
+                        <span>This Month</span>
+                        <strong>21</strong>
+                        <small>Reports generated</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- QUICK REPORT GENERATOR -->
+            <section class="panel quick-report-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Quick Report Generator</h2>
+                        <p>Select a report type to generate a new report.</p>
+                    </div>
+
+                    <span class="report-badge">Admin</span>
+
+                </div>
+
+
+                <div class="report-generator">
+
+                    <div class="generator-card">
+
+                        <div class="generator-icon farmer-generator">
+                            ♙
+                        </div>
+
+                        <div class="generator-content">
+                            <strong>Farmer Report</strong>
+                            <span>Registration, activity and farmer data</span>
+                        </div>
+
+                        <button>Generate →</button>
+
+                    </div>
+
+
+                    <div class="generator-card">
+
+                        <div class="generator-icon crop-generator">
+                            🌱
+                        </div>
+
+                        <div class="generator-content">
+                            <strong>Crop Report</strong>
+                            <span>Crop records and cultivation details</span>
+                        </div>
+
+                        <button>Generate →</button>
+
+                    </div>
+
+
+                    <div class="generator-card">
+
+                        <div class="generator-icon market-generator">
+                            ₹
+                        </div>
+
+                        <div class="generator-content">
+                            <strong>Market Report</strong>
+                            <span>Market prices and crop price analysis</span>
+                        </div>
+
+                        <button>Generate →</button>
+
+                    </div>
+
+
+                    <div class="generator-card">
+
+                        <div class="generator-icon query-generator">
+                            ?
+                        </div>
+
+                        <div class="generator-content">
+                            <strong>Expert Query Report</strong>
+                            <span>Farmer queries and expert responses</span>
+                        </div>
+
+                        <button>Generate →</button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TWO COLUMN SECTION -->
+            <div class="report-content-grid">
+
+
+                <!-- REPORT CATEGORIES -->
+                <section class="panel categories-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Report Categories</h2>
+                            <p>Available platform reports</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="category-cards">
+
+                        <div class="category-card">
+
+                            <div class="category-card-icon">♙</div>
+
+                            <div>
+                                <strong>Farmers</strong>
+                                <span>18 Reports</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="category-card">
+
+                            <div class="category-card-icon">🌱</div>
+
+                            <div>
+                                <strong>Crops</strong>
+                                <span>24 Reports</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="category-card">
+
+                            <div class="category-card-icon">₹</div>
+
+                            <div>
+                                <strong>Market</strong>
+                                <span>29 Reports</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+
+                        <div class="category-card">
+
+                            <div class="category-card-icon">?</div>
+
+                            <div>
+                                <strong>Queries</strong>
+                                <span>15 Reports</span>
+                            </div>
+
+                            <b>→</b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- REPORT STATUS -->
+                <section class="panel report-status-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Report Status</h2>
+                            <p>Current report activity</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-report-list">
+
+                        <div class="status-report-row">
+
+                            <div class="status-report-icon ready">
+                                ✓
+                            </div>
+
+                            <div>
+                                <strong>Completed</strong>
+                                <span>81 reports ready</span>
+                            </div>
+
+                            <b>94%</b>
+
+                        </div>
+
+
+                        <div class="status-report-row">
+
+                            <div class="status-report-icon pending">
+                                ◷
+                            </div>
+
+                            <div>
+                                <strong>Processing</strong>
+                                <span>05 reports processing</span>
+                            </div>
+
+                            <b>6%</b>
+
+                        </div>
+
+
+                        <div class="status-report-row">
+
+                            <div class="status-report-icon failed">
+                                !
+                            </div>
+
+                            <div>
+                                <strong>Failed</strong>
+                                <span>No failed reports</span>
+                            </div>
+
+                            <b>0%</b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- RECENT REPORTS -->
+            <section class="panel recent-reports">
+
+                <div class="recent-report-header">
+
+                    <div>
+                        <h2>Recent Reports</h2>
+                        <p>Recently generated reports</p>
+                    </div>
+
+                    <button class="view-all-reports">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="reports-table-wrapper">
+
+                    <table class="reports-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Report</th>
+                                <th>Category</th>
+                                <th>Generated By</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <div class="report-name">
+
+                                        <div class="file-icon">
+                                            ▤
+                                        </div>
+
+                                        <strong>Farmer Registration Report</strong>
+
+                                    </div>
+                                </td>
+
+                                <td>Farmers</td>
+                                <td>Administrator</td>
+                                <td>08 Oct 2026</td>
+
+                                <td>
+                                    <span class="report-ready">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="download-report">
+                                        ↓ Download
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="report-name">
+
+                                        <div class="file-icon">
+                                            ▤
+                                        </div>
+
+                                        <strong>Crop Distribution Report</strong>
+
+                                    </div>
+                                </td>
+
+                                <td>Crops</td>
+                                <td>Administrator</td>
+                                <td>07 Oct 2026</td>
+
+                                <td>
+                                    <span class="report-ready">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="download-report">
+                                        ↓ Download
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="report-name">
+
+                                        <div class="file-icon">
+                                            ▤
+                                        </div>
+
+                                        <strong>Market Price Analysis</strong>
+
+                                    </div>
+                                </td>
+
+                                <td>Market</td>
+                                <td>Administrator</td>
+                                <td>06 Oct 2026</td>
+
+                                <td>
+                                    <span class="report-ready">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="download-report">
+                                        ↓ Download
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <div class="report-name">
+
+                                        <div class="file-icon">
+                                            ▤
+                                        </div>
+
+                                        <strong>Expert Query Report</strong>
+
+                                    </div>
+                                </td>
+
+                                <td>Queries</td>
+                                <td>Administrator</td>
+                                <td>05 Oct 2026</td>
+
+                                <td>
+                                    <span class="report-ready">
+                                        Ready
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="download-report">
+                                        ↓ Download
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- INSIGHT -->
+            <div class="report-insight">
+
+                <div class="report-insight-icon">
+                    💡
+                </div>
+
+                <div>
+                    <strong>Report Insight</strong>
+
+                    <p>
+                        Most reports are currently generated from farmer,
+                        crop and market management data.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

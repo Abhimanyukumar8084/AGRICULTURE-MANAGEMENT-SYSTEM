@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Digital Agriculture</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <style>
+        /* Administrator Profile Link */
+        .admin-account {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .admin-account:hover {
+            opacity: .92;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+
+            <div class="brand-logo">🌿</div>
+
+            <div class="brand-text">
+                <strong>Digital Agriculture</strong>
+                <span>Admin Panel</span>
+            </div>
+
+        </div>
+
+
+        <nav class="admin-menu">
+
+            <a href="admin-dashboard.html" class="active">
+                <span class="menu-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="admin-farmers.html">
+                <span class="menu-icon">♙</span>
+                <span>Farmers</span>
+            </a>
+
+            <a href="admin-crops.html">
+                <span class="menu-icon">🌱</span>
+                <span>Crops</span>
+            </a>
+
+            <a href="admin-market.html">
+                <span class="menu-icon">₹</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="admin-reports.html">
+                <span class="menu-icon">▣</span>
+                <span>Reports</span>
+            </a>
+
+            <a href="admin-users.html">
+                <span class="menu-icon">♟</span>
+                <span>Users</span>
+            </a>
+
+            <a href="admin-feedback.html">
+                <span class="menu-icon">☷</span>
+                <span>Feedback</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <a href="admin-settings.html">
+                <span>⚙</span>
+                Settings
+            </a>
+
+            <a href="login.html">
+                <span>↪</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="admin-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+                <button class="sidebar-toggle">☰</button>
+            </div>
+
+
+            <!-- CLICKABLE ADMIN PROFILE -->
+
+            <a href="admin-profile.html" class="admin-account">
+
+                <div class="notification">
+                    ♢
+                    <span></span>
+                </div>
+
+                <div class="account-divider"></div>
+
+                <div class="account-avatar">
+                    A
+                </div>
+
+                <div class="account-details">
+                    <strong>Administrator</strong>
+                    <small>Administrator</small>
+                </div>
+
+                <div class="account-arrow">
+                    ▾
+                </div>
+
+            </a>
+
+        </header>
+
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <div class="admin-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Monitor and manage your agriculture platform.</p>
+                </div>
+
+                <div class="dashboard-date">
+                    <span>Today</span>
+                    <strong>08 October 2026</strong>
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <div class="stats-row">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon farmers-icon">
+                        ♙
+                    </div>
+
+                    <div class="stat-info">
+                        <strong>1,248</strong>
+                        <span>Total Farmers</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon crops-icon">
+                        🌱
+                    </div>
+
+                    <div class="stat-info">
+                        <strong>340</strong>
+                        <span>Total Crops</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon area-icon">
+                        ▥
+                    </div>
+
+                    <div class="stat-info">
+                        <strong>1,500</strong>
+                        <span>Total Area (Acres)</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon query-icon">
+                        ?
+                    </div>
+
+                    <div class="stat-info">
+                        <strong>25</strong>
+                        <span>Expert Queries</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= FIRST ROW ================= -->
+
+            <div class="content-grid">
+
+
+                <!-- CROP DISTRIBUTION -->
+
+                <section class="panel crop-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Crops Distribution</h2>
+                            <p>Current crop distribution on platform</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="crop-area">
+
+
+                        <div class="donut">
+
+                            <div class="donut-inner">
+                                <strong>340</strong>
+                                <span>Crops</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="crop-legend">
+
+                            <div class="legend-item">
+                                <span class="legend-color wheat"></span>
+                                <label>Wheat</label>
+                                <b>35%</b>
+                            </div>
+
+                            <div class="legend-item">
+                                <span class="legend-color rice"></span>
+                                <label>Rice</label>
+                                <b>25%</b>
+                            </div>
+
+                            <div class="legend-item">
+                                <span class="legend-color maize"></span>
+                                <label>Maize</label>
+                                <b>20%</b>
+                            </div>
+
+                            <div class="legend-item">
+                                <span class="legend-color mustard"></span>
+                                <label>Mustard</label>
+                                <b>10%</b>
+                            </div>
+
+                            <div class="legend-item">
+                                <span class="legend-color other"></span>
+                                <label>Others</label>
+                                <b>10%</b>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECENT FARMERS -->
+
+                <section class="panel farmers-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Recent Farmer Registrations</h2>
+                            <p>Latest farmers joined the platform</p>
+                        </div>
+
+                        <a href="admin-farmers.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="farmer-table">
+
+                        <div class="farmer-table-head">
+                            <span>Name</span>
+                            <span>Mobile</span>
+                            <span>Date</span>
+                        </div>
+
+
+                        <div class="farmer-table-row">
+
+                            <div class="farmer-name">
+
+                                <div class="small-avatar">
+                                    AS
+                                </div>
+
+                                <strong>Amit Singh</strong>
+
+                            </div>
+
+                            <span>9876543210</span>
+                            <span>08 Oct 2026</span>
+
+                        </div>
+
+
+                        <div class="farmer-table-row">
+
+                            <div class="farmer-name">
+
+                                <div class="small-avatar">
+                                    SK
+                                </div>
+
+                                <strong>Suresh Kumar</strong>
+
+                            </div>
+
+                            <span>8765432109</span>
+                            <span>07 Oct 2026</span>
+
+                        </div>
+
+
+                        <div class="farmer-table-row">
+
+                            <div class="farmer-name">
+
+                                <div class="small-avatar">
+                                    NS
+                                </div>
+
+                                <strong>Neha Sharma</strong>
+
+                            </div>
+
+                            <span>7654321098</span>
+                            <span>06 Oct 2026</span>
+
+                        </div>
+
+
+                        <div class="farmer-table-row">
+
+                            <div class="farmer-name">
+
+                                <div class="small-avatar">
+                                    RP
+                                </div>
+
+                                <strong>Ravi Patel</strong>
+
+                            </div>
+
+                            <span>6543210987</span>
+                            <span>05 Oct 2026</span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- ================= SECOND ROW ================= -->
+
+            <div class="content-grid second-grid">
+
+
+                <!-- RECENT ACTIVITIES -->
+
+                <section class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Recent Activities</h2>
+                            <p>Latest platform activity</p>
+                        </div>
+
+                        <a href="#">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon green-bg">
+                                🌱
+                            </div>
+
+                            <div>
+                                <strong>New crop added</strong>
+                                <span>Wheat was added by a farmer</span>
+                            </div>
+
+                            <small>2 hrs ago</small>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon blue-bg">
+                                ♙
+                            </div>
+
+                            <div>
+                                <strong>New farmer registered</strong>
+                                <span>A new farmer joined the platform</span>
+                            </div>
+
+                            <small>5 hrs ago</small>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon orange-bg">
+                                ₹
+                            </div>
+
+                            <div>
+                                <strong>Market price updated</strong>
+                                <span>Latest crop prices updated</span>
+                            </div>
+
+                            <small>Yesterday</small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- PLATFORM STATUS -->
+
+                <section class="panel status-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Platform Status</h2>
+                            <p>Current system status</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-list">
+
+
+                        <div class="status-row">
+
+                            <div>
+                                <strong>Website</strong>
+                                <span>All services running</span>
+                            </div>
+
+                            <b class="online">
+                                Online
+                            </b>
+
+                        </div>
+
+
+                        <div class="status-row">
+
+                            <div>
+                                <strong>Database</strong>
+                                <span>Database connection active</span>
+                            </div>
+
+                            <b class="online">
+                                Online
+                            </b>
+
+                        </div>
+
+
+                        <div class="status-row">
+
+                            <div>
+                                <strong>Weather Service</strong>
+                                <span>Weather data available</span>
+                            </div>
+
+                            <b class="online">
+                                Online
+                            </b>
+
+                        </div>
+
+
+                        <div class="status-row">
+
+                            <div>
+                                <strong>Market Service</strong>
+                                <span>Price data updated</span>
+                            </div>
+
+                            <b class="online">
+                                Online
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="admin-footer">
+
+            <div>
+                © 2026 Digital Agriculture. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Help</a>
+            </div>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>
