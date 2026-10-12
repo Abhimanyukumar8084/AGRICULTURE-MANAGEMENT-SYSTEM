@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:agriculture-test;DB_CLOSE_DELAY=-1
+    username: root
+    password: "625337"
+  jpa:
+    hibernate:
+      ddl-auto: validate
+app:
+  bootstrap-admin:
+    email:
+    password:

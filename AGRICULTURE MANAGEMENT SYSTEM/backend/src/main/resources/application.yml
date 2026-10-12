@@ -1,0 +1,71 @@
+spring:
+  application:
+    name: digital-agriculture-api
+  profiles:
+    default: dev
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: ${PORT:8080}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: ${SESSION_COOKIE_SAME_SITE:lax}
+        secure: ${SESSION_COOKIE_SECURE:false}
+      timeout: 30m
+app:
+  market-data:
+    api-key: ${DATA_GOV_API_KEY:}
+    resource-id: ${DATA_GOV_RESOURCE_ID:9ef84268-d588-465a-a308-a864a43d0070}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:*,http://127.0.0.1:*}
+  bootstrap-admin:
+    email: ${BOOTSTRAP_ADMIN_EMAIL:}
+    password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+    first-name: ${BOOTSTRAP_ADMIN_FIRST_NAME:Platform}
+    last-name: ${BOOTSTRAP_ADMIN_LAST_NAME:Administrator}
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:h2:file:./data/agriculture;AUTO_SERVER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: false
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+server:
+  servlet:
+    session:
+      cookie:
+        secure: ${SESSION_COOKIE_SECURE:true}
+app:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}
