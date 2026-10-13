@@ -1,0 +1,384 @@
+:root {
+    --app-ink: #15372a;
+    --app-leaf: #278252;
+    --app-mint: #eaf7ee;
+}
+
+.app-toast {
+    position: fixed;
+    z-index: 9999;
+    right: 22px;
+    bottom: 22px;
+    max-width: min(420px, calc(100vw - 32px));
+    padding: 14px 18px;
+    border: 1px solid rgba(40, 130, 82, .2);
+    border-radius: 14px;
+    color: var(--app-ink);
+    background: #fff;
+    box-shadow: 0 16px 46px rgba(22, 61, 42, .18);
+    animation: app-toast-in .2s ease-out;
+}
+
+.app-toast[data-kind="error"] {
+    border-color: #f2b8ad;
+    color: #842b1c;
+}
+
+.app-toast[data-kind="success"] {
+    background: var(--app-mint);
+}
+
+.app-overlay {
+    position: fixed;
+    z-index: 9998;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(13, 39, 28, .62);
+    backdrop-filter: blur(8px);
+}
+
+.app-dialog {
+    width: min(560px, 100%);
+    max-height: min(88vh, 820px);
+    overflow: auto;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 24px;
+    background: linear-gradient(155deg, #fff 0%, #f4fbf5 100%);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .25);
+}
+
+.app-dialog h2 {
+    margin: 0 36px 6px 0;
+    color: var(--app-ink);
+}
+
+.app-dialog p {
+    color: #66766c;
+}
+
+.app-dialog form {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.app-dialog label {
+    display: grid;
+    gap: 7px;
+    color: #284838;
+    font-weight: 600;
+}
+
+.app-dialog input,
+.app-dialog select,
+.app-dialog textarea {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+    border: 1px solid #d5e5da;
+    border-radius: 11px;
+    color: #193d2b;
+    background: #fff;
+    font: inherit;
+}
+
+.app-dialog textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.app-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.app-button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 11px;
+    color: #fff;
+    background: linear-gradient(135deg, #237a4b, #40a56a);
+    box-shadow: 0 7px 18px rgba(39, 130, 82, .2);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.app-button:hover {
+    filter: brightness(1.04);
+    transform: translateY(-1px);
+}
+
+.app-button:disabled {
+    opacity: .6;
+    cursor: wait;
+    transform: none;
+}
+
+.app-button-secondary {
+    border: 1px solid #d5e5da;
+    color: #315642;
+    background: #fff;
+    box-shadow: none;
+}
+
+.app-feature-panel {
+    margin: 26px 0;
+    padding: clamp(18px, 3vw, 30px);
+    border: 1px solid rgba(61, 144, 96, .14);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 94% 0%, rgba(139, 214, 157, .28), transparent 30%),
+        linear-gradient(135deg, #fff 0%, #f2faf3 100%);
+    box-shadow: 0 14px 42px rgba(31, 87, 54, .07);
+}
+
+.app-feature-panel h2,
+.app-feature-panel h3 {
+    color: var(--app-ink);
+}
+
+.app-record-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.app-record-card {
+    padding: 17px;
+    border: 1px solid #e0eee3;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .92);
+}
+
+.app-record-card h3 {
+    margin: 0 0 6px;
+}
+
+.app-record-card p {
+    color: #617368;
+}
+
+.app-record-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+    color: #52715d;
+    font-size: .88rem;
+}
+
+.app-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 9px;
+    border-radius: 999px;
+    color: #226a40;
+    background: #e6f6eb;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.app-empty {
+    padding: 20px;
+    border: 1px dashed #bed9c6;
+    border-radius: 14px;
+    color: #5d7364;
+    text-align: center;
+}
+
+.app-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.app-toolbar p {
+    margin: 0;
+    color: #5d7364;
+}
+
+.app-weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.app-weather-day {
+    padding: 13px;
+    border-radius: 14px;
+    background: #fff;
+    text-align: center;
+}
+
+.app-weather-day strong,
+.app-weather-day span {
+    display: block;
+    margin: 5px 0;
+}
+
+.app-weather-description {
+    color: #506b5b;
+    font-size: 12px;
+}
+
+.weather-condition-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    flex: 0 0 auto;
+    vertical-align: middle;
+}
+
+.app-weather-description .weather-condition-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 8px auto;
+    color: #259461;
+}
+
+.weather-condition-icon-sun {
+    color: #dc9a26;
+}
+
+.weather-condition-icon-partly-cloudy {
+    color: #49966f;
+}
+
+.weather-condition-icon-fog,
+.weather-condition-icon-cloud {
+    color: #738b7d;
+}
+
+.weather-condition-icon-rain,
+.weather-condition-icon-snow {
+    color: #4b86a5;
+}
+
+.weather-condition-icon-storm {
+    color: #8b69ad;
+}
+
+.app-market-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 16px;
+    border: 1px solid #e0eee3;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.app-market-row {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr .8fr 1.8fr 1fr;
+    gap: 12px;
+    min-width: 780px;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e8f0e9;
+    color: #345241;
+}
+
+.app-market-row:last-child {
+    border-bottom: 0;
+}
+
+.app-market-row:first-child {
+    color: var(--app-ink);
+    background: #eff8f1;
+}
+
+.app-feature-panel label {
+    display: inline-grid;
+    gap: 6px;
+    margin: 0 10px 12px 0;
+    color: #315642;
+    font-weight: 600;
+}
+
+.app-feature-panel input {
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid #d5e5da;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.app-hero-glow {
+    position: relative;
+    isolation: isolate;
+}
+
+.app-hero-glow::after {
+    position: absolute;
+    z-index: -1;
+    top: -120px;
+    right: -140px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(106, 193, 125, .2), transparent 70%);
+    content: "";
+    pointer-events: none;
+}
+
+.navbar .logo {
+    flex-shrink: 0;
+}
+
+.navbar .logo h2 {
+    white-space: nowrap;
+    font-size: clamp(16px, 1.75vw, 23px);
+}
+
+.navbar .nav-links {
+    gap: clamp(9px, 1vw, 18px);
+}
+
+.navbar .nav-links a,
+.navbar .nav-buttons a {
+    white-space: nowrap;
+    font-size: clamp(12px, 1.15vw, 15px);
+}
+
+.navbar .nav-buttons {
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.market-section > .section-heading > p {
+    color: #64776b;
+}
+
+@keyframes app-toast-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+    .app-dialog {
+        padding: 20px;
+        border-radius: 18px;
+    }
+    .app-feature-panel {
+        border-radius: 17px;
+    }
+    .app-toolbar .app-button {
+        width: 100%;
+    }
+    .navbar .nav-links {
+        display: none;
+    }
+}
